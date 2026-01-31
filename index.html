@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TATTVO TECH - Modern IT Solutions</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta name="description" content="TATTVO TECH offers cutting-edge web development, backend support, and Salesforce CRM solutions for small and large industries. Empowering businesses with digital excellence.">
+    <meta name="keywords" content="web development, backend support, Salesforce CRM, IT solutions, TATTVO TECH, AWS, React, HTML, CSS, JavaScript, startup, digital excellence">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="TATTVO TECH - Innovating Digital Excellence">
+    <meta property="og:description" content="Empowering small to large industries with cutting-edge web development, reliable backend support, and expert Salesforce CRM solutions.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1f2937/d1d5db?text=TATTVO+TECH">
+    <meta property="og:url" content="https://www.tattvotech.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body class="bg-gray-950 text-gray-200">
+
+    <div id="scrollToTopBtn" class="scroll-to-top shadow-lg">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div id="side-nav" class="hidden md:flex">
+        <a href="#hero" class="nav-dot active" data-section="hero"><span>Home</span></a>
+        <a href="#services" class="nav-dot" data-section="services"><span>Services</span></a>
+        <a href="#about" class="nav-dot" data-section="about"><span>About Us</span></a>
+        <a href="#team" class="nav-dot" data-section="team"><span>Our Team</span></a>
+        <a href="#clients" class="nav-dot" data-section="clients"><span>Clients</span></a>
+        <a href="#vision" class="nav-dot" data-section="vision"><span>Our Vision</span></a>
+        <a href="#contact" class="nav-dot" data-section="contact"><span>Contact</span></a>
+    </div>
+
+    <header class="fixed top-0 left-0 w-full z-50 p-4 lg:px-20 backdrop-blur-sm">
+  <nav class="flex justify-between items-center max-w-7xl mx-auto">
+
+    <!-- Logo -->
+    <a href="index.html" class="text-xl font-bold text-white tracking-wide">
+      <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-10">
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#services" class="text-sm font-medium hover:text-purple-400">Services</a>
+      <a href="#about" class="text-sm font-medium hover:text-purple-400">About Us</a>
+      <a href="#team" class="text-sm font-medium hover:text-purple-400">Our Team</a>
+      <a href="#clients" class="text-sm font-medium hover:text-purple-400">Our Clients</a>
+      <a href="#vision" class="text-sm font-medium hover:text-purple-400">Our Vision</a>
+      <a href="#contact" class="text-sm font-medium hover:text-purple-400">Contact</a>
+    </div>
+
+    <!-- Desktop Button -->
+    <a href="courses.html"
+      class="hidden md:inline-block py-2 px-5 rounded-lg bg-purple-700 text-white font-semibold hover:bg-purple-600 transition-all shadow-lg">
+      TATTVO COURSES
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden text-2xl text-white">
+      <i id="bars-icon" class="fas fa-bars"></i>
+      <i id="times-icon" class="fas fa-times hidden"></i>
+    </button>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden w-full bg-gray-900 mt-4 p-4 rounded-lg shadow-xl">
+    <a href="#services" class="block py-2 text-white hover:bg-gray-800 rounded-md">Services</a>
+    <a href="#about" class="block py-2 text-white hover:bg-gray-800 rounded-md">About Us</a>
+    <a href="#team" class="block py-2 text-white hover:bg-gray-800 rounded-md">Our Team</a>
+    <a href="#clients" class="block py-2 text-white hover:bg-gray-800 rounded-md">Our Clients</a>
+    <a href="#vision" class="block py-2 text-white hover:bg-gray-800 rounded-md">Our Vision</a>
+    <a href="#contact" class="block py-2 text-white hover:bg-gray-800 rounded-md">Contact</a>
+
+    <!-- Mobile Button -->
+    <a href="courses.html"
+      class="block mt-4 py-2 px-4 rounded-lg bg-purple-700 text-white font-semibold text-center hover:bg-purple-600">
+      TATTVO COURSES
+    </a>
+  </div>
+</header>
+
+
+    <main class="relative z-10">
+        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 overflow-hidden">
+            <canvas id="hero-canvas" class="hero-canvas absolute inset-0 w-full h-full z-0"></canvas>
+            <div class="z-10 relative">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4">
+                    Innovating <span class="text-gradient">Digital</span> Excellence
+                </h1>
+                <p class="text-lg sm:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-gray-400">
+                    Empowering small to large industries with cutting-edge web development, reliable backend support, and expert Salesforce CRM solutions.
+                </p>
+                <a href="#services" class="inline-block py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+
+       <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Core Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- 1. Software Development -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+            <p class="text-gray-400">
+                Custom software, enterprise systems, SaaS products, and API integrations built for scalability and performance.
+            </p>
+        </div>
+
+        <!-- 2. Web Development -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-code"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+            <p class="text-gray-400">
+                Websites, portals, e-commerce, and custom web applications developed with modern frameworks and clean UI.
+            </p>
+        </div>
+
+        <!-- 3. Mobile App Development -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+            <p class="text-gray-400">
+                Android, iOS, cross-platform apps, UI/UX design, and full lifecycle app maintenance.
+            </p>
+        </div>
+
+        <!-- 4. UI/UX & Creative Design -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-pencil-ruler"></i></div>
+            <h3 class="text-xl font-semibold mb-2">UI/UX & Creative Design</h3>
+            <p class="text-gray-400">
+                User-centric UI/UX, brand identity, logos, wireframes, and premium marketing creatives.
+            </p>
+        </div>
+
+        <!-- 5. Cloud & DevOps -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-cloud"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Cloud, DevOps & Infrastructure</h3>
+            <p class="text-gray-400">
+                Cloud deployment, migrations, CI/CD pipelines, Docker, Kubernetes, and server management.
+            </p>
+        </div>
+
+        <!-- 6. AI & Automation -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-robot"></i></div>
+            <h3 class="text-xl font-semibold mb-2">AI, Automation & Emerging Tech</h3>
+            <p class="text-gray-400">
+                AI/ML models, chatbots, business automation, and low-code/no-code business solutions.
+            </p>
+        </div>
+
+        <!-- 7. Data & Analytics -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-chart-line"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Data & Analytics</h3>
+            <p class="text-gray-400">
+                Data engineering, dashboards, warehousing, BI insights, and enterprise analytics.
+            </p>
+        </div>
+
+        <!-- 8. Enterprise Business Solutions -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-network-wired"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Enterprise Business Solutions</h3>
+            <p class="text-gray-400">
+                CRM, ERP, enterprise integrations, business optimization, IVR & communication systems.
+            </p>
+        </div>
+
+        <!-- 9. Maintenance & Managed Services -->
+        <div class="card p-8 rounded-2xl text-center shadow-xl">
+            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-tools"></i></div>
+            <h3 class="text-xl font-semibold mb-2">Maintenance & Managed Services</h3>
+            <p class="text-gray-400">
+                Application maintenance, AMC, dedicated support teams, and long-term managed IT services.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="flex flex-col lg:flex-row items-center gap-12">
+    
+    <!-- LEFT CONTENT -->
+    <div class="lg:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">About TATTVO TECH</h2>
+      
+      <p class="text-lg text-gray-400 mb-6">
+        TATTVO TECH is a fast-growing technology company dedicated to delivering modern, scalable, 
+        and business-ready IT solutions. We help startups, small businesses, and large enterprises 
+        accelerate their digital transformation with innovative and future-focused services.
+      </p>
+
+      <p class="text-lg text-gray-400 mb-6">
+        Our expertise spans across 
+        <span class="font-semibold text-white">Web Development</span>, 
+        <span class="font-semibold text-white">Backend Engineering</span>, 
+        <span class="font-semibold text-white">Salesforce CRM</span>, 
+        <span class="font-semibold text-white">Cloud & DevOps</span>, and 
+        <span class="font-semibold text-white">Mobile App Development</span>.
+        We combine creativity, technology, and strategy to deliver 
+        secure, user-friendly, and high-performance solutions tailored to unique business needs.
+      </p>
+
+      <p class="text-lg text-gray-400 mb-6">
+        With the addition of 
+        <span class="font-semibold text-white">UI/UX Design</span>, 
+        <span class="font-semibold text-white">IVR & Call Automation</span>, and
+        <span class="font-semibold text-white">Digital Marketing</span>, 
+        we now provide complete end-to-end digital ecosystem development — from branding to 
+        development, deployment, automation, and customer engagement.
+      </p>
+
+      <p class="text-lg text-gray-400">
+        At TATTVO TECH, we believe in innovation, transparency, and long-term partnerships.  
+        We don’t just deliver projects — we build reliable, scalable solutions that help businesses 
+        grow, compete, and succeed in today's digital world.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE SLIDER -->
+    <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/about1.png" alt="Team working" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/about2.png" alt="Web development" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/about3.png" alt="Salesforce services" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/about4.png" alt="Cloud & Mobile Apps" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+
+        <section id="team" class="py-20 px-4 max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Meet Our Talented Team</h2>
+            <div class="flex justify-center gap-8 text-center flex-wrap">
+                <div class="card p-6 rounded-2xl shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                    <img src="./assets/team/team-member-1.png" alt="Vinay Yadav - Founder & CEO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-semibold mb-1">Vinay Yadav</h3>
+                    <p class="text-gray-400">Founder & CEO, Lead Developer</p>
+                    <i class="text-gray-400">"It’s never too late to start your dream."</i>
+                </div>
+                <div class="card p-6 rounded-2xl text-center shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                    <img src="./assets/team/team-member-2.png" alt="Hari Priya V - Co-founder & CMO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-semibold mb-1">Hari Priya V</h3>
+                    <p class="text-gray-400">Co-founder & CMO, UI/UX</p>
+                    <i class="text-gray-400">"Taking the first step is the key to progress"</i>
+                </div>
+                <div class="card p-6 rounded-2xl text-center shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                    <img src="./assets/team/team-member-3.jpeg" alt="Jay Sai Kiran K - Co-founder & CTO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-semibold mb-1">Jaya Sai Kiran K</h3>
+                    <p class="text-gray-400">Co-founder & CTO, CRM Specialist</p>
+                    <i class="text-gray-400">"When we do the work we love, growth and profit follow naturally."</i>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="py-20 px-4 max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Trusted by Our Clients</h2>
+            <div class="flex justify-center gap-8 items-center flex-wrap">
+                <a href="https://squaremeterls.com/" target="_blank"><img src="./assets/Square meter.jpeg" alt="Square meter Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://lushlayerss.com/" target="_blank"><img src="./assets/LL.jpeg" alt="Lush Layers Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://stjosephshospital.it.com/" target="_blank"><img src="./assets/St jos.jpeg" alt="stjosephshospital Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://forceinfo.netlify.app/" target="_blank"><img src="./assets/Forceinfologo.png" alt="Forceinfo Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://nakshavastra.netlify.app/" target="_blank"><img src="./assets/Naksha Vastra.png" alt="Nakshavastra Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+            </div>
+        </section>
+
+<section id="vision" class="py-20 px-4 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Our Vision: What's Next</h2>
+    <p class="text-lg mb-8 text-gray-400 max-w-3xl mx-auto">
+        We are continuously evolving to build smarter, faster, and more intelligent solutions.
+        Our future roadmap focuses on innovation, automation, and scalable digital ecosystems 
+        that empower businesses to stay ahead in a rapidly changing world.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- AI-Powered Analytics -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-brain"></i></div>
+            <h3 class="text-lg font-semibold mb-2">AI-Powered Analytics</h3>
+            <p class="text-gray-400">
+                Transforming raw data into intelligent insights with AI-driven analysis, predictive modeling, 
+                and performance optimization.
+            </p>
+        </div>
+
+        <!-- Advanced Cloud & DevOps -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-cloud-upload-alt"></i></div>
+            <h3 class="text-lg font-semibold mb-2">Advanced Cloud & DevOps Solutions</h3>
+            <p class="text-gray-400">
+                Scaling our cloud expertise to offer seamless migrations, automated DevOps pipelines, and 
+                resilient infrastructure with minimal downtime.
+            </p>
+        </div>
+
+        <!-- Next-Gen Mobile Apps -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="text-lg font-semibold mb-2">Next-Generation Mobile Applications</h3>
+            <p class="text-gray-400">
+                Building high-performance native and cross-platform mobile applications designed for speed, 
+                stability, and an exceptional user experience.
+            </p>
+        </div>
+
+        <!-- Intelligent Business Automation -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-robot"></i></div>
+            <h3 class="text-lg font-semibold mb-2">Intelligent Business Automation</h3>
+            <p class="text-gray-400">
+                Crafting automation systems that streamline operations, reduce manual workload, 
+                and enhance enterprise efficiency.
+            </p>
+        </div>
+
+        <!-- Enterprise Platforms & Integrations -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-network-wired"></i></div>
+            <h3 class="text-lg font-semibold mb-2">Enterprise Platforms & Integrations</h3>
+            <p class="text-gray-400">
+                Extending our enterprise offerings with advanced CRM, ERP, IVR, and end-to-end 
+                business system integrations.
+            </p>
+        </div>
+
+        <!-- Secure & Scalable Digital Ecosystems -->
+        <div class="card p-6 rounded-xl shadow-lg">
+            <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-shield-alt"></i></div>
+            <h3 class="text-lg font-semibold mb-2">Secure & Scalable Digital Ecosystems</h3>
+            <p class="text-gray-400">
+                Strengthening our commitment to security-first solutions designed for reliability, 
+                compliance, and long-term scalability.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+         <section id="contact" class="py-20 px-4 max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
+                Get in Touch
+            </h2>
+            <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-2xl mx-auto">
+                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL00000AflJl" method="POST" class="space-y-6">
+                    <input type=hidden name="oid" value="00DgL00000AflJl">
+                    <input type=hidden name="retURL" value="http://www.tattvotech.com/">
+                    <input id="lead_source" name="lead_source" type="hidden" value="Web" />
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium mb-1">First Name</label>
+                            <input id="first_name" maxlength="40" name="first_name" type="text" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        </div>
+
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium mb-1">Last Name</label>
+                            <input id="last_name" maxlength="80" name="last_name" type="text" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input id="email" maxlength="80" name="email" type="email" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        </div>
+
+                        <div>
+                            <label for="mobile">Mobile</label>
+                            <input id="mobile" maxlength="10" name="mobile" size="20" type="text" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="title" class="block text-sm font-medium mb-1">Title</label>
+                        <input id="title" maxlength="40" name="title" type="text" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                    </div>
+
+                    <div>
+                        <label for="company" class="block text-sm font-medium mb-1">Company</label>
+                        <input id="company" maxlength="40" name="company" type="text" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                    </div>
+
+                    <div>
+                        <label for="description" class="block text-sm font-medium mb-1">Description</label>
+                        <textarea name="description" rows="4" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"></textarea>
+                    </div>
+                    <input id="lead_source" name="lead_source" type="hidden" value="Web" />
+                    <div class="text-center">
+                        <button type="submit" name="submit" class="py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 px-4 text-center text-gray-500 border-t border-gray-800 mt-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-x-8 md:space-y-0 text-white">
+            <div class="flex-1 text-left">
+                <h3 class="font-bold mb-4">Our Vision</h3>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    To be a trusted industry leader, delivering exceptional services through modern technology, while continuously growing and creating lasting value for our clients.
+                </p>
+            </div>
+
+            <div class="flex-1 text-left">
+                <h3 class="font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Software Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Mobile App Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">UI/UX & Creative Design</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Cloud, DevOps & Infrastructure</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">AI, Automation & Emerging Tech</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Data & Analytics</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Enterprise Business Solutions</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Maintenance & Managed Services</a></li>
+                    </ul>
+            </div>
+
+            <div class="flex-1 text-left">
+                <h3 class="font-bold mb-4">Navigation</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#hero" class="hover:text-purple-400 transition-colors">Home</a></li>
+                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Services</a></li>
+                    <li><a href="#about" class="hover:text-purple-400 transition-colors">About Us</a></li>
+                    <li><a href="#team" class="hover:text-purple-400 transition-colors">Our Team</a></li>
+                    <li><a href="#clients" class="hover:text-purple-400 transition-colors">Our Clients</a></li>
+                    <li><a href="#vision" class="hover:text-purple-400 transition-colors">Our Vision</a></li>
+                    <li><a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="flex-1 text-left md:text-right">
+                <h3 class="font-bold mb-4">Follow Us</h3>
+                <div class="flex space-x-4 mb-4 justify-start md:justify-end">
+                    <a href="https://x.com/TattvoTech?t=g-LQDmT6fKnVeJkjeaHB5A&s=08"class="text-xl hover:text-purple-400 transition-colors" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.973 6.817H1.674l7.73-8.823L1.254 2.25h7.08l4.713 6.231 5.197-6.231z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/message/HA3FPKEQLAZJN1" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/tattvo-tech/" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/tattvotech?igsh=emszMWo0YXhkd281" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@tattvotech?si=QdRjD6iqTS71AOgL" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+                <h3 class="font-bold mb-4">Contact</h3>
+                <div class="text-sm space-y-1 text-gray-400">
+                    <p>+91-7075899111</p>
+                    <p>info@tattvotech.com</p>
+                </div>
+            </div>
+        </div>
+        <p class="mt-8 text-sm text-gray-500">&copy; 2025 TATTVO TECH. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+
+</body>
+</html>

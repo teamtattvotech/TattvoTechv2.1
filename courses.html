@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TATTVO TECH EDUCATION – Courses & Training</title>
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+
+<body class="bg-gray-950 text-gray-200">
+  <!-- Scroll To Top Button -->
+  <div id="scrollToTopBtn" class="scroll-to-top shadow-lg">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Side Navigation -->
+  <div id="side-nav" class="hidden md:flex">
+    <a class="nav-dot active" data-section="hero" href="#hero"><span>Home</span></a>
+    <a class="nav-dot" data-section="about" href="#about"><span>About</span></a>
+    <a class="nav-dot" data-section="courses" href="#courses"><span>Courses</span></a>
+    <a class="nav-dot" data-section="future" href="#future"><span>Future</span></a>
+    <a class="nav-dot" data-section="contact" href="#contact"><span>Contact</span></a>
+  </div>
+
+  <!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 p-4 lg:px-20 backdrop-blur-sm">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto">
+
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold text-white">
+            <img src="./assets/logo.png" class="h-10" />
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+            <a href="#about" class="hover:text-purple-400">About</a>
+            <a href="#courses" class="hover:text-purple-400">Courses</a>
+            <a href="#future" class="hover:text-purple-400">Upcoming</a>
+            <a href="#contact" class="hover:text-purple-400">Contact</a>
+        </div>
+
+        <!-- Switch to Main Site Button (Desktop) -->
+        <a href="index.html"
+           class="hidden md:inline-block py-2 px-5 rounded-lg bg-purple-700 text-white font-semibold hover:bg-purple-600 transition-all shadow-lg">
+           TATTVO TECH
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-lg text-white">
+            <i id="bars-icon" class="fas fa-bars"></i>
+            <i id="times-icon" class="fas fa-times hidden"></i>
+        </button>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden w-full bg-gray-900 mt-4 p-4 rounded-lg shadow-xl">
+        <a href="#about" class="block py-2 hover:bg-gray-800 text-white">About</a>
+        <a href="#courses" class="block py-2 hover:bg-gray-800 text-white">Courses</a>
+        <a href="#future" class="block py-2 hover:bg-gray-800 text-white">Upcoming</a>
+        <a href="#contact" class="block py-2 hover:bg-gray-800 text-white">Contact</a>
+
+        <!-- Mobile MAIN SITE Button -->
+        <a href="index.html"
+           class="block mt-4 py-2 text-center bg-purple-700 rounded-lg hover:bg-purple-600 text-white">
+            TATTVO TECH
+        </a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 overflow-hidden">
+    <canvas id="hero-canvas" class="hero-canvas absolute inset-0 w-full h-full z-0"></canvas>
+
+    <div class="z-10 relative">
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4">
+        Developing Your Digital Future Through
+        <span class="text-gradient">Education</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-gray-400">
+        Learn high-demand tech skills from industry-level experts and grow your
+        career with company-backed certification programs.
+      </p>
+
+      <a href="#courses" class="inline-block py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 shadow-lg">
+        Explore Courses
+      </a>
+    </div>
+</section>
+
+  <!-- ABOUT -->
+<section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="flex flex-col lg:flex-row items-center gap-12">
+
+    <!-- LEFT TEXT -->
+    <div class="lg:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">About Our Education Program</h2>
+
+      <p class="text-lg text-gray-400 mb-6">
+        TATTVO TECH EDUCATION is dedicated to helping students and professionals
+        upgrade their skills with real-world technologies. Our courses are designed
+        and taught by working engineers, ensuring hands-on learning and career-ready
+        training.
+      </p>
+
+      <p class="text-lg text-gray-400 mb-6">
+        🎓 Each student receives an official
+        <span class="font-semibold text-white">TATTVO TECH Company Certificate</span>
+        upon completing a course.
+      </p>
+
+      <p class="text-lg text-gray-400">
+        We follow a practical, project-based teaching approach to make learning
+        more effective and industry-aligned.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE SLIDER -->
+    <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/course1.png" alt="Tech Training" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/course2.png" alt="Learning Environment" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/course3.png" alt="On-Field Projects" class="w-full h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/course4.png" alt="Team Collaboration" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- COURSES -->
+  <section id="courses" class="py-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Courses</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- 1. Core Java -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">Core Java</h3>
+        <p class="text-gray-400">Duration: 60 Days</p>
+        <p class="text-gray-300 font-semibold mt-2">₹7,000</p>
+        <a href="https://drive.google.com/file/d/1yzzy-Hw9kdkGoCjsQiRWC7F3v7Sk4Nn9/view?usp=sharing" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+      <!-- 2. Python -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">Python</h3>
+        <p class="text-gray-400">Duration: 60 Days</p>
+        <p class="text-gray-300 font-semibold mt-2">₹13,000</p>
+        <a href="https://drive.google.com/file/d/14FLtK-SHEm0ZLFS1EWaxydMuu8G3OgCP/view?usp=sharing" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+      <!-- 3. Frontend -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">Frontend (HTML, CSS, JavaScript)</h3>
+        <p class="text-gray-400">Duration: 60 Days</p>
+        <p class="text-gray-300 font-semibold mt-2">₹5,000</p>
+        <a href="https://drive.google.com/file/d/1F85dYSU-0PUNGogBJ3a3tlwDXLW5bBvp/view?usp=sharing" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+      <!-- 4. React -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">React (Beginner → Advanced)</h3>
+        <p class="text-gray-400">Duration: 45 Days</p>
+        <p class="text-gray-300 font-semibold mt-2">₹9,000</p>
+        <a href="https://drive.google.com/file/d/1jM4UXmWhGUNJCoV78S-LmweLX-e0_P5k/view?usp=sharing" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+      <!-- 5. Django Backend -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">Backend (Django + APIs + Database)</h3>
+        <p class="text-gray-400">Duration: 60 Days</p>
+        <p class="text-gray-300 font-semibold mt-2">₹15,000</p>
+        <a href="https://drive.google.com/file/d/1Rjf6x9nEAdZX8_5Uczr2M3Wllw2gsuF4/view?usp=drive_link" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+      <!-- 6. Salesforce -->
+      <div class="card p-8 rounded-2xl shadow-xl text-center">
+        <h3 class="text-xl font-semibold mb-2">Salesforce CRM (Complete)</h3>
+        <p class="text-gray-400">Duration: 6 Months</p>
+        <p class="text-gray-300 font-semibold mt-2">₹30,000</p>
+        <a href="https://drive.google.com/file/d/1MxNpImw5Nl7JZ6Qk_ABHnHT2mmloZ2DY/view?usp=drive_link" class="inline-block mt-4 py-2 px-4 rounded-lg bg-purple-700 hover:bg-purple-600 text-white text-sm">
+          View Syllabus
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Fee Structure -->
+    <div class="mt-16 p-8 rounded-2xl card max-w-xl mx-auto text-center">
+      <h3 class="text-xl font-bold mb-4">Student-Friendly Fee Structure</h3>
+      <p class="text-gray-400 mb-2">Option A: One-time payment → 5–10% discount</p>
+      <p class="text-gray-400">Option B: Installments → 50% at joining + 50% mid-course</p>
+    </div>
+  </section>
+
+  <!-- FUTURE AI COURSES -->
+  <section id="future" class="py-20 px-4 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Upcoming AI & Tech Programs</h2>
+
+    <p class="text-gray-400 mb-12 max-w-3xl mx-auto">
+      We are expanding our education program with cutting-edge AI and next-gen
+      technology courses.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card p-6 rounded-xl shadow-lg">
+        <i class="fas fa-brain text-4xl text-purple-400 mb-4"></i>
+        <h3 class="font-semibold mb-2">AI & Machine Learning</h3>
+        <p class="text-gray-400">Models, algorithms, ML workflow</p>
+      </div>
+
+      <div class="card p-6 rounded-xl shadow-lg">
+        <i class="fas fa-robot text-4xl text-purple-400 mb-4"></i>
+        <h3 class="font-semibold mb-2">Chatbot & LLM Development</h3>
+        <p class="text-gray-400">AI apps, chatbots, prompt engineering</p>
+      </div>
+
+      <div class="card p-6 rounded-xl shadow-lg">
+        <i class="fas fa-database text-4xl text-purple-400 mb-4"></i>
+        <h3 class="font-semibold mb-2">Data Science & Analytics</h3>
+        <p class="text-gray-400">Data processing, dashboards, BI tools</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="course-form" class="py-20">
+  <h2 class="text-3xl font-bold text-center mb-6 text-white">Register for Course</h2>
+  <div class="max-w-4xl mx-auto">
+    <iframe 
+      src="https://forms.gle/pnJJDQCzL4z1beuW9"
+      width="100%"
+      height="900"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-4 text-center text-gray-500 border-t border-gray-800 mt-12">
+    <p class="text-gray-400">
+      © 2025 TATTVO TECH EDUCATION • All Rights Reserved
+    </p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

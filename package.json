@@ -1,0 +1,21 @@
+{
+  "name": "tattvo-tech-website",
+  "version": "1.0.0",
+  "description": "A modern website for TATTVO TECH, designed with a focus on web development, backend support, and Salesforce CRM services.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server ."
+  },
+  "keywords": [
+    "website",
+    "web-development",
+    "tailwind",
+    "three.js",
+    "tattvo-tech"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
