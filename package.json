@@ -1,7 +1,7 @@
 {
   "name": "tattvo-tech-website",
   "version": "1.0.0",
-  "description": "A modern website for TATTVO TECH, designed with a focus on web development, backend support, and Salesforce CRM services.",
+  "description": "A modern website for TATTVO TECH, focused on web development, mobile app development, and MuleSoft integration.",
   "main": "index.html",
   "scripts": {
     "start": "npx http-server ."

@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TATTVO Vision | AI for Accounting, Tax &amp; Financial Intelligence</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta name="description" content="TATTVO Vision is our product initiative exploring a specialized AI assistant for accounting, tax, GST and financial analysis. Help us shape the future of financial intelligence.">
+    <meta name="keywords" content="TATTVO Vision, Accounting AI, Financial AI, AI for accounting, AI for CA, Indian accounting AI, GST AI, financial document analysis, accounting automation, financial intelligence">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="TATTVO Vision | AI for Accounting, Tax &amp; Financial Intelligence">
+    <meta property="og:description" content="We're exploring a specialized AI assistant designed to help people understand accounting, tax, GST and financial information — with evidence behind the answers.">
+    <meta property="og:image" content="https://placehold.co/1200x630/f8fafc/4338ca?text=TATTVO+VISION">
+    <meta property="og:url" content="https://www.tattvotech.com/tattvo-vision.html">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4338ca', // Indigo
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            600: '#475569',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fafbfe;
+            color: #1e293b;
+        }
+
+        .vision-gradient-text {
+            background-image: linear-gradient(135deg, #4338ca 0%, #7c3aed 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtle-card {
+            background-color: #ffffff;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+            transition: all 0.25s ease;
+        }
+
+        .subtle-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .step-node {
+            position: relative;
+        }
+
+        @media (min-width: 1024px) {
+            .step-node:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 36px;
+                right: -24px;
+                width: 48px;
+                height: 2px;
+                background: linear-gradient(90deg, #c7d2fe 0%, #e0e7ff 100%);
+                z-index: 1;
+            }
+        }
+
+        /* Subtle focus rings */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        /* Prototype pulse indicators */
+        .proto-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.625rem;
+            border-radius: 9999px;
+            background-color: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- Top Notice / Exploration Banner -->
+    <div class="bg-[#090e13] border-b border-slate-800/80 py-2.5 px-4 text-center text-xs sm:text-sm text-slate-300 font-medium">
+        <span class="inline-flex items-center gap-1.5 flex-wrap justify-center">
+            <span class="inline-block w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <strong class="text-white">High-Fidelity Product Prototype:</strong> Interactive concept demonstration for idea validation &amp; investor preview. AI backend is currently in research &amp; design.
+        </span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-[#0E141A]/95 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center" aria-label="Main Navigation">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+                <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-9 w-auto">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-purple-300 bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">
+                    Vision
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-7">
+                <a href="#problem" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Problem</a>
+                <a href="#what-it-could-do" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Capabilities</a>
+                <a href="#prototype-upload" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Demo</a>
+                <a href="#prototype-chat" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">AI Q&amp;A</a>
+                <a href="#prototype-analysis" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Analysis</a>
+                <a href="#prototype-insights" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Audit Flags</a>
+                <a href="#prototype-evidence" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-purple-400 transition-colors duration-200">Evidence</a>
+                <a href="#validation" class="text-xs font-bold uppercase tracking-wider text-white bg-purple-600 hover:bg-purple-500 px-5 py-2.5 rounded-full transition-all duration-200 shadow-md shadow-purple-900/40">
+                    Help Us Shape It
+                </a>
+                <a href="index.html" class="text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-white transition-colors duration-200 flex items-center gap-1.5 pl-3 border-l border-slate-700">
+                    <span>Main Site</span>
+                    <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="vision-mobile-toggle" class="lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i id="vision-bars" class="fas fa-bars text-xl"></i>
+                <i id="vision-times" class="fas fa-times text-xl hidden"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="vision-mobile-menu" class="hidden lg:hidden bg-[#0E141A]/98 backdrop-blur-md border-b border-slate-800 px-5 py-4 space-y-2 shadow-2xl">
+            <a href="#problem" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">The Problem</a>
+            <a href="#what-it-could-do" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">What Could Tattvo Do?</a>
+            <a href="#prototype-upload" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">Document Prototype</a>
+            <a href="#prototype-chat" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">AI Q&amp;A Prototype</a>
+            <a href="#prototype-analysis" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">Financial Analysis</a>
+            <a href="#prototype-insights" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">Needs Attention Flags</a>
+            <a href="#prototype-evidence" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">Evidence Verification</a>
+            <a href="#prototype-report" class="block py-2 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-white/5 px-2.5 rounded-lg transition-colors">Report Generation</a>
+            <a href="#validation" class="block mt-2 py-2.5 px-4 text-sm font-semibold text-center text-white bg-purple-600 rounded-xl hover:bg-purple-500 shadow-md shadow-purple-900/40 transition-colors">
+                Help Us Shape It (Surveys)
+            </a>
+            <a href="index.html" class="block py-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-white border-t border-slate-800 pt-3 px-2.5 transition-colors">
+                &larr; Back to TATTVO TECH
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 overflow-hidden bg-gradient-to-b from-white via-indigo-50/30 to-[#fafbfe]">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Tag / Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-indigo-700 bg-indigo-100/70 border border-indigo-200/80 mb-6">
+                    <i class="fas fa-compass text-indigo-600"></i> OUR NEXT PRODUCT
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                    TATTVO <span class="vision-gradient-text">VISION</span>
+                </h1>
+
+                <!-- Supporting Headline -->
+                <p class="text-xl sm:text-2xl lg:text-3xl font-medium text-slate-800 max-w-3xl mx-auto mb-6">
+                    Reimagining how people understand their financial information.
+                </p>
+
+                <!-- Simple Explanation -->
+                <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    We're exploring a specialized AI assistant designed to help people understand accounting, tax, GST, and financial information — with evidence behind the answers.
+                </p>
+
+                <!-- Validation Notice Callout -->
+                <div class="inline-block bg-white/90 border border-slate-200 rounded-2xl px-5 py-3 mb-10 text-xs sm:text-sm text-slate-600 shadow-sm">
+                    <span class="font-semibold text-slate-900"><i class="fas fa-sliders text-indigo-600 mr-1.5"></i>Interactive Prototype:</span>
+                    Experience simulated workflows below. We are validating this product vision before final development.
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#validation" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-white font-semibold bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-600/20 transition-all text-sm sm:text-base">
+                        <span>Help Us Shape It</span>
+                        <i class="fas fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#how-it-could-work" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-slate-700 font-medium bg-white hover:bg-slate-50 border border-slate-200 transition-all text-sm sm:text-base">
+                        <span>See How It Could Work</span>
+                        <i class="fas fa-arrow-right text-xs text-slate-400"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. THE PROBLEM SECTION -->
+        <section id="problem" class="py-20 bg-white border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">The Real Challenge</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Financial information is everywhere. Understanding it is the hard part.
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Whether you are a seasoned Chartered Accountant or a growing business owner, navigating numbers shouldn't feel like searching through a labyrinth of fragmented documents.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Spread Across Documents</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Financial records are scattered across PDFs, bank statements, spreadsheets, ledgers, and portal downloads.
+                        </p>
+                    </div>
+
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Difficult to Find Key Details</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Crucial transactions or line items take precious minutes or hours to manually track down and cross-verify.
+                        </p>
+                    </div>
+
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Statements Take Time</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Interpreting complex balance sheets and profit &amp; loss statements requires extensive manual calculation.
+                        </p>
+                    </div>
+
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-book-bookmark"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Tax Questions Need Research</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            GST, TDS, and statutory rules constantly evolve, requiring continuous referencing and contextual research.
+                        </p>
+                    </div>
+
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Tedious Comparisons</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Comparing periods and identifying unusual variance or discrepancies between quarters is highly repetitive.
+                        </p>
+                    </div>
+
+                    <div class="subtle-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-900 mb-2">Numbers Need Explanations</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            People need clear narrative explanations and verified evidence behind conclusions, not just raw isolated numbers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. THE PRODUCT IDEA -->
+        <section id="concept" class="py-20 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">The Concept</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Imagine having an AI that understands your financial world.
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        We are exploring an AI assistant specifically built around Indian accounting, tax compliance, GST, financial statements, and financial document analysis.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-6">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+                        <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            Specialized Domains Being Explored
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-600 pt-2">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-indigo-600 mt-1"></i>
+                                <span><strong>Accounting &amp; Financial Statements:</strong> Balance sheets, Profit &amp; Loss, trial balances, and ledgers.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-indigo-600 mt-1"></i>
+                                <span><strong>Tax &amp; GST Intelligence:</strong> GST returns, reconciliation, TDS guidelines, and tax document assistance.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-indigo-600 mt-1"></i>
+                                <span><strong>Document Analysis:</strong> Invoices, bank statements, audit schedules, and Excel spreadsheets.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-indigo-600 mt-1"></i>
+                                <span><strong>Financial Research:</strong> Searching accounting standards, compliance norms, and historical transaction patterns.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-indigo-900 text-white p-8 rounded-3xl shadow-xl space-y-5 relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-indigo-700/30 rounded-full blur-2xl"></div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-indigo-200 bg-indigo-800 border border-indigo-700">
+                            <i class="fas fa-user-shield"></i> Core Design Philosophy
+                        </div>
+                        <h3 class="text-2xl font-bold text-white tracking-tight">
+                            AI that assists judgment, never blindly replaces it.
+                        </h3>
+                        <p class="text-indigo-100 text-sm sm:text-base leading-relaxed">
+                            "The AI assists with reading, searching, calculating, comparing, detecting and explaining. The professional remains in control of decisions and review."
+                        </p>
+                        <p class="text-xs text-indigo-200/80 leading-relaxed border-t border-indigo-800 pt-4">
+                            We believe financial intelligence requires verification, context, and human oversight — never opaque automated guesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. WHAT COULD TATTVO DO? (CORE FEATURE-VALUE SECTION) -->
+        <section id="what-it-could-do" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Built For Clarity</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Built around the questions that matter.
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Instead of simply storing financial information, the vision is to help you understand it.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 block mb-1">01. Understand Documents</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Ingest &amp; Structure Multi-Format Files</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Eliminates manual data re-entry and reading hours by instantly extracting tables and contextual balances from diverse formats.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            Upload a scanned balance sheet PDF and extract line-item totals in seconds.
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 block mb-1">02. Ask Questions</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Natural Plain-Language Inquiries</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Ask any question in plain English without writing complex database queries or navigating convoluted menus.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            <em>"What were our total vendor travel expenses across Q2 and Q3?"</em>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 block mb-1">03. Analyze Financials</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Instant Period &amp; Margin Variance</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Automatically compares quarters, computes ratios, and surfaces margin movements with zero formula setup.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            Highlight YoY gross margin compression and identify the contributing cost buckets.
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-triangle-exclamation"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">04. Find What Needs Attention</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Audit &amp; Review Suggestions</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Identifies potential anomalies, duplicate bills, and ledger mismatches early for human professional review.
+                            </p>
+                        </div>
+                        <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            Flags two ₹85,000 invoices with the same vendor reference dated 2 days apart.
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-scale-balanced"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 block mb-1">05. Understand GST &amp; Tax</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Compliance &amp; Reconciliation Support</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Clarifies complex statutory sections, reconciliation differences, and input tax credit (ITC) questions.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            Identify why GSTR-2B credit doesn't tally with your purchase ledger for July.
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="subtle-card p-7 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-base mb-4 font-bold">
+                                <i class="fas fa-magnifying-glass-chart"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 block mb-1">06. Explain the Why</span>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Narrative Behind Every Figure</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                <strong>Customer Value:</strong> Gives leadership and clients clear written rationales behind figures, translating numbers into business context.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-700">
+                            <span class="font-semibold text-slate-900 block mb-0.5">Example:</span>
+                            Explain that operating profit dropped because administrative headcount expanded ahead of sales.
+                        </div>
+                    </div>
+
+                    <!-- Feature 7 (Spans 3 cols on large screens or centered) -->
+                    <div class="subtle-card p-7 rounded-2xl md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-white via-indigo-50/20 to-white">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm font-bold">
+                                    <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-indigo-700">07. Generate Reports</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Executive Summaries &amp; Working Papers</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                <strong>Customer Value:</strong> Compiles verified findings, audit schedules, and management commentary into clean exportable documentation for clients, bankers, or stakeholders.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-xs text-slate-700 min-w-[240px] shadow-xs">
+                            <span class="font-semibold text-slate-900 block mb-1"><i class="fas fa-circle-check text-indigo-600 mr-1"></i>Deliverable Output:</span>
+                            Generate client-ready review memos with tables, citations, and suggested audit questions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CUSTOMER-LEVEL HOW IT COULD WORK -->
+        <section id="how-it-could-work" class="py-24 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Simplicity First</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        How It Could Work
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        A clean, structured experience designed to bring instant clarity to complex financial information without exposing complicated technology.
+                    </p>
+                </div>
+
+                <!-- 5-Step Process (Responsive: Horizontal on desktop, Vertical on mobile) -->
+                <div class="grid lg:grid-cols-5 gap-6 relative">
+                    <!-- Step 1 -->
+                    <div class="step-node subtle-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-base mb-5 shadow-sm">
+                                01
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Ask or Upload</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                Ask a financial question or upload the information you want to understand.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100">
+                            <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wide block mb-1">Examples:</span>
+                            <span class="inline-block text-xs text-indigo-700 bg-indigo-50/80 px-2 py-0.5 rounded mr-1 mb-1">P&amp;L</span>
+                            <span class="inline-block text-xs text-indigo-700 bg-indigo-50/80 px-2 py-0.5 rounded mr-1 mb-1">GST PDFs</span>
+                            <span class="inline-block text-xs text-indigo-700 bg-indigo-50/80 px-2 py-0.5 rounded mr-1 mb-1">Excel</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-node subtle-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-base mb-5 shadow-sm">
+                                02
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Understand</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                The AI understands the context, extracts structured data, and identifies what matters.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100">
+                            <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wide block mb-1">Focus:</span>
+                            <span class="text-xs text-slate-600">Contextual parsing &amp; table recognition</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-node subtle-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-base mb-5 shadow-sm">
+                                03
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Analyze</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                It can explore numbers, compare periods, find variances, and help investigate potential issues.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100">
+                            <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wide block mb-1">Focus:</span>
+                            <span class="text-xs text-slate-600">Period variance &amp; anomaly checks</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-node subtle-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-base mb-5 shadow-sm">
+                                04
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Explain</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                Instead of simply giving a bare number, it explains what it found, how it calculated it, and why.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100">
+                            <span class="text-[11px] font-medium text-slate-500 uppercase tracking-wide block mb-1">Focus:</span>
+                            <span class="text-xs text-slate-600">Transparent plain-language reasoning</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="step-node subtle-card p-6 rounded-2xl flex flex-col justify-between bg-indigo-50/40 border-indigo-200/80">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-base mb-5 shadow-md">
+                                05
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Act with Confidence</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                Get clearer insights, supporting evidence, and actionable next steps — while keeping judgment in human hands.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-indigo-100">
+                            <span class="text-[11px] font-medium text-indigo-900 uppercase tracking-wide block mb-1">Outcome:</span>
+                            <span class="text-xs text-indigo-800 font-medium">Verified professional decisions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DOCUMENT INTELLIGENCE PROTOTYPE (INTERACTIVE DEMO) -->
+        <section id="prototype-upload" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-indigo-700 bg-indigo-50 border border-indigo-200 mb-3">
+                        <i class="fas fa-play text-xs text-indigo-600"></i> Interactive Component Demo
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Give Tattvo the information. Ask what matters.
+                    </h2>
+                    <p class="text-base text-slate-600 leading-relaxed">
+                        Click on any sample financial file below to simulate how Tattvo extracts structured intelligence and suggests immediate investigative questions.
+                    </p>
+                </div>
+
+                <!-- Prototype Upload Container -->
+                <div class="subtle-card rounded-3xl p-6 sm:p-10 border-slate-200/90 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6 flex-wrap gap-2">
+                        <div class="flex items-center gap-2.5 flex-wrap">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                            <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Document Workspace Prototype</span>
+                            <span class="inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200">
+                                SIMULATED PROTOTYPE
+                            </span>
+                        </div>
+                        <span class="proto-badge">
+                            Simulated Environment
+                        </span>
+                    </div>
+
+                    <!-- Simulated Drag & Drop Zone -->
+                    <div class="border-2 border-dashed border-slate-200 hover:border-indigo-400 rounded-2xl p-8 text-center transition-all bg-slate-50/50 mb-8 cursor-pointer group">
+                        <div class="w-14 h-14 rounded-2xl bg-white text-indigo-600 shadow-xs border border-slate-200 flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform">
+                            <i class="fas fa-cloud-arrow-up text-2xl"></i>
+                        </div>
+                        <h4 class="text-sm font-semibold text-slate-800 mb-1">Click to select or drag and drop financial documents</h4>
+                        <p class="text-xs text-slate-500">Supports PDF, Excel (.xlsx, .csv), Scanned Reports, Bank Statements, Invoices</p>
+                    </div>
+
+                    <!-- Sample Interactive File Cards -->
+                    <div class="mb-8">
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-3">
+                            Select a sample document to test simulated analysis:
+                        </span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="sample-file-grid">
+                            <button type="button" data-file="Balance Sheet.pdf" class="sample-file-btn subtle-card p-3.5 rounded-xl text-left border-slate-200 hover:border-indigo-400 focus:border-indigo-600 focus:bg-indigo-50/40 transition-all text-xs">
+                                <i class="fas fa-file-pdf text-rose-500 text-lg mb-2 block"></i>
+                                <span class="font-semibold text-slate-800 block truncate">Balance Sheet.pdf</span>
+                                <span class="text-[11px] text-slate-400">Audited • 2.4 MB</span>
+                            </button>
+                            <button type="button" data-file="Profit &amp; Loss.xlsx" class="sample-file-btn subtle-card p-3.5 rounded-xl text-left border-slate-200 hover:border-indigo-400 focus:border-indigo-600 focus:bg-indigo-50/40 transition-all text-xs">
+                                <i class="fas fa-file-excel text-emerald-600 text-lg mb-2 block"></i>
+                                <span class="font-semibold text-slate-800 block truncate">Profit &amp; Loss.xlsx</span>
+                                <span class="text-[11px] text-slate-400">FY 25-26 • 840 KB</span>
+                            </button>
+                            <button type="button" data-file="Bank Statement.pdf" class="sample-file-btn subtle-card p-3.5 rounded-xl text-left border-slate-200 hover:border-indigo-400 focus:border-indigo-600 focus:bg-indigo-50/40 transition-all text-xs">
+                                <i class="fas fa-file-pdf text-indigo-500 text-lg mb-2 block"></i>
+                                <span class="font-semibold text-slate-800 block truncate">Bank Statement.pdf</span>
+                                <span class="text-[11px] text-slate-400">12 Months • 4.1 MB</span>
+                            </button>
+                            <button type="button" data-file="GST Report.xlsx" class="sample-file-btn subtle-card p-3.5 rounded-xl text-left border-slate-200 hover:border-indigo-400 focus:border-indigo-600 focus:bg-indigo-50/40 transition-all text-xs">
+                                <i class="fas fa-file-excel text-teal-600 text-lg mb-2 block"></i>
+                                <span class="font-semibold text-slate-800 block truncate">GST Report.xlsx</span>
+                                <span class="text-[11px] text-slate-400">GSTR-2B • 1.2 MB</span>
+                            </button>
+                            <button type="button" data-file="Invoice.pdf" class="sample-file-btn subtle-card p-3.5 rounded-xl text-left border-slate-200 hover:border-indigo-400 focus:border-indigo-600 focus:bg-indigo-50/40 transition-all text-xs col-span-2 sm:col-span-1">
+                                <i class="fas fa-file-invoice text-amber-500 text-lg mb-2 block"></i>
+                                <span class="font-semibold text-slate-800 block truncate">Invoice.pdf</span>
+                                <span class="text-[11px] text-slate-400">Batch 44 • 512 KB</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Simulated Result Display -->
+                    <div id="simulated-analysis-panel" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all">
+                        <div id="analysis-idle-state" class="text-center py-6">
+                            <i class="fas fa-hand-pointer text-slate-400 text-2xl mb-2"></i>
+                            <p class="text-xs text-slate-500">Click any document card above to simulate automatic extraction and analysis.</p>
+                        </div>
+                        <div id="analysis-loading-state" class="hidden text-center py-8">
+                            <div class="inline-block w-8 h-8 border-3 border-indigo-600 border-t-transparent rounded-full animate-spin mb-3"></div>
+                            <p class="text-xs font-semibold text-indigo-700">Simulating document understanding &amp; table extraction...</p>
+                            <p class="text-[11px] text-slate-400 mt-1">Cross-referencing line items and ledger balances</p>
+                        </div>
+                        <div id="analysis-ready-state" class="hidden">
+                            <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-circle-check text-emerald-600 text-sm"></i>
+                                    <span class="text-xs font-bold text-slate-900" id="analyzed-filename">Balance Sheet.pdf</span>
+                                    <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-medium">Extracted &amp; Verified</span>
+                                </div>
+                                <span class="text-xs text-slate-400 italic">Prototype demonstration result</span>
+                            </div>
+                            <div class="grid sm:grid-cols-3 gap-4 mb-4 text-xs">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200">
+                                    <span class="text-slate-500 block mb-1">Parsed Tables:</span>
+                                    <span class="font-bold text-slate-800 text-sm">Assets &amp; Liabilities (34 rows)</span>
+                                </div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-200">
+                                    <span class="text-slate-500 block mb-1">Total Assets:</span>
+                                    <span class="font-bold text-slate-800 text-sm">₹4,82,40,000</span>
+                                </div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-200">
+                                    <span class="text-slate-500 block mb-1">Current Ratio:</span>
+                                    <span class="font-bold text-indigo-700 text-sm">1.84 (Healthy)</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-xs">
+                                <span class="font-semibold text-slate-900 block mb-1"><i class="fas fa-sparkles text-indigo-600 mr-1"></i>Suggested Questions You Can Ask:</span>
+                                <div class="flex flex-wrap gap-2 pt-1">
+                                    <span class="bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 border border-slate-200 px-2.5 py-1 rounded-lg text-slate-700 cursor-pointer">"How did debtors change compared to prior year?"</span>
+                                    <span class="bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 border border-slate-200 px-2.5 py-1 rounded-lg text-slate-700 cursor-pointer">"What drove the short-term borrowing variance?"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                        <span>Workflow: Upload &rarr; Understand &rarr; Ask</span>
+                        <span>*No files are stored or uploaded to any server.</span>
+                    </div>
+                </div>
+
+                <!-- Small, tasteful disclaimer note below the workspace -->
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-2xl mx-auto leading-relaxed">
+                    This interactive preview demonstrates the intended product experience. Real document processing and AI analysis will be implemented in the full product.
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. AI QUESTION PROTOTYPE (INTERACTIVE Q&A CONVERSATION) -->
+        <section id="prototype-chat" class="py-24 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Simulated Inquiry</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Ask questions. Get answers that make sense.
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        Experience how the AI conversation provides verified answers supported by structured financial delta cards.
+                    </p>
+                </div>
+
+                <!-- Chat Prototype Container -->
+                <div class="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8">
+                    <!-- Header -->
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold">
+                                TV
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-900 block">Tattvo Financial Assistant</span>
+                                <span class="text-[11px] text-slate-500">Interactive Query Preview</span>
+                            </div>
+                        </div>
+                        <span class="proto-badge">
+                            Illustrative prototype response
+                        </span>
+                    </div>
+
+                    <!-- User Message -->
+                    <div class="flex items-start gap-3.5 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                            YOU
+                        </div>
+                        <div class="bg-slate-100 rounded-2xl rounded-tl-sm px-4 py-3 text-sm text-slate-800 max-w-lg shadow-2xs">
+                            "Why did our profit decrease compared with last year?"
+                        </div>
+                    </div>
+
+                    <!-- AI Response -->
+                    <div class="flex items-start gap-3.5 mb-8">
+                        <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">
+                            AI
+                        </div>
+                        <div class="space-y-4 max-w-2xl">
+                            <div class="bg-indigo-50/70 border border-indigo-100 rounded-2xl rounded-tl-sm p-4 text-sm text-slate-800 leading-relaxed">
+                                <p class="mb-2">
+                                    Based on the information provided, revenue increased, but operating expenses grew faster than revenue.
+                                </p>
+                                <p class="text-slate-600">
+                                    The largest changes appear to be an increase in operating expenses and a reduction in gross margin across your operational divisions.
+                                </p>
+                            </div>
+
+                            <!-- Supporting Insight Cards (Requested exact metrics) -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                                <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-xs">
+                                    <span class="text-xs text-slate-500 block mb-1">Revenue</span>
+                                    <span class="text-sm font-bold text-emerald-600 flex items-center justify-center gap-1">
+                                        <i class="fas fa-arrow-up text-xs"></i> +12.4%
+                                    </span>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-xs">
+                                    <span class="text-xs text-slate-500 block mb-1">Operating Exp.</span>
+                                    <span class="text-sm font-bold text-rose-600 flex items-center justify-center gap-1">
+                                        <i class="fas fa-arrow-up text-xs"></i><i class="fas fa-arrow-up text-xs -ml-1"></i> +21.7%
+                                    </span>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-xs">
+                                    <span class="text-xs text-slate-500 block mb-1">Gross Margin</span>
+                                    <span class="text-sm font-bold text-amber-600 flex items-center justify-center gap-1">
+                                        <i class="fas fa-arrow-down text-xs"></i> -4.2%
+                                    </span>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-xs">
+                                    <span class="text-xs text-slate-500 block mb-1">Net Profit</span>
+                                    <span class="text-sm font-bold text-rose-600 flex items-center justify-center gap-1">
+                                        <i class="fas fa-arrow-down text-xs"></i> -8.6%
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Supporting Recommendation Callout -->
+                            <div class="bg-slate-50 border-l-4 border-indigo-600 p-3.5 rounded-r-xl text-xs sm:text-sm text-slate-700">
+                                <strong>Supporting Review Advice:</strong> Operating expenditures grew primarily in logistics (+31.2%) and third-party IT contractor billings (+24.5%). Review these accounts first.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Mockup -->
+                    <div class="border-t border-slate-100 pt-4 flex gap-2">
+                        <input type="text" disabled placeholder="Ask another question about this financial statement... (Demo)" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-500 cursor-not-allowed">
+                        <button disabled class="bg-slate-200 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-semibold cursor-not-allowed">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                    </div>
+
+                    <div class="text-center pt-3">
+                        <span class="text-[11px] text-slate-400 italic">
+                            *Demo data only. Does not represent actual client numbers or live AI calculations.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FINANCIAL ANALYSIS PROTOTYPE (DASHBOARD PREVIEW & PERIOD COMPARISON) -->
+        <section id="prototype-analysis" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Financial Intelligence</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Financial Analysis Prototype
+                    </h2>
+                    <p class="text-base text-slate-600 leading-relaxed">
+                        A clean, dashboard-style preview demonstrating multi-period financial comparison and narrative variance detection.
+                    </p>
+                </div>
+
+                <!-- Dashboard Preview Card -->
+                <div class="subtle-card rounded-3xl p-6 sm:p-8 border-slate-200/90 shadow-sm">
+                    <!-- Toolbar & Period Selector -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+                        <div>
+                            <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Multi-Period Comparison</span>
+                            <h3 class="text-base font-bold text-slate-900">FY 2025 vs FY 2026 Variance Analysis</h3>
+                        </div>
+                        <div class="inline-flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs font-semibold text-slate-700">
+                            <span class="bg-white shadow-xs px-3 py-1.5 rounded-lg text-indigo-700 font-bold">2025 vs 2026</span>
+                            <span class="px-3 py-1.5 rounded-lg text-slate-500">Quarterly (Q1-Q4)</span>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid (Revenue, Expenses, Gross Profit, Net Profit, Cash Flow) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-8">
+                        <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Revenue</span>
+                            <span class="text-base font-bold text-slate-900 block">₹1,42,80,000</span>
+                            <span class="text-[11px] font-semibold text-emerald-600 flex items-center gap-1 mt-1">
+                                <i class="fas fa-arrow-up text-[10px]"></i> +14.2% YoY
+                            </span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Expenses</span>
+                            <span class="text-base font-bold text-slate-900 block">₹1,18,60,000</span>
+                            <span class="text-[11px] font-semibold text-rose-600 flex items-center gap-1 mt-1">
+                                <i class="fas fa-arrow-up text-[10px]"></i> +23.8% YoY
+                            </span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Gross Profit</span>
+                            <span class="text-base font-bold text-slate-900 block">₹54,20,000</span>
+                            <span class="text-[11px] font-semibold text-amber-600 flex items-center gap-1 mt-1">
+                                <i class="fas fa-arrow-down text-[10px]"></i> -3.1% YoY
+                            </span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Net Profit</span>
+                            <span class="text-base font-bold text-slate-900 block">₹24,20,000</span>
+                            <span class="text-[11px] font-semibold text-rose-600 flex items-center gap-1 mt-1">
+                                <i class="fas fa-arrow-down text-[10px]"></i> -8.6% YoY
+                            </span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl col-span-2 sm:col-span-1">
+                            <span class="text-xs text-slate-500 block mb-1">Cash Flow</span>
+                            <span class="text-base font-bold text-slate-900 block">₹31,40,000</span>
+                            <span class="text-[11px] font-semibold text-emerald-600 flex items-center gap-1 mt-1">
+                                <i class="fas fa-arrow-up text-[10px]"></i> +5.4% YoY
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Clean Visual Comparison Chart -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-6">
+                        <div class="flex items-center justify-between text-xs text-slate-600 mb-4">
+                            <span class="font-bold text-slate-800">Visual Comparison (₹ in Lakhs)</span>
+                            <div class="flex items-center gap-4">
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-slate-300"></span> FY 2025</span>
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-indigo-600"></span> FY 2026</span>
+                            </div>
+                        </div>
+
+                        <!-- Bar chart simulation -->
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                                    <span>Revenue</span>
+                                    <span>125L vs 142.8L (+14.2%)</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden flex">
+                                    <div class="bg-slate-300 h-3" style="width: 70%"></div>
+                                    <div class="bg-indigo-600 h-3" style="width: 18%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                                    <span>Operating Expenses</span>
+                                    <span>95.8L vs 118.6L (+23.8%)</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden flex">
+                                    <div class="bg-slate-300 h-3" style="width: 55%"></div>
+                                    <div class="bg-rose-500 h-3" style="width: 24%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                                    <span>Net Margin</span>
+                                    <span>21.2% vs 16.9% (-4.3 pts)</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden flex">
+                                    <div class="bg-slate-300 h-3" style="width: 60%"></div>
+                                    <div class="bg-amber-500 h-3" style="width: 15%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example Narrative Insights -->
+                    <div class="bg-indigo-50/60 border border-indigo-100 rounded-2xl p-5">
+                        <span class="text-xs font-bold text-indigo-950 uppercase tracking-wider block mb-2">
+                            <i class="fas fa-sparkles text-indigo-600 mr-1.5"></i>Tattvo Automated Findings:
+                        </span>
+                        <ul class="space-y-1.5 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-indigo-600 text-xs mt-1"></i>
+                                <span><strong>Revenue increased:</strong> Top-line grew by +14.2% led by enterprise client expansions.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-circle-exclamation text-amber-600 text-xs mt-1"></i>
+                                <span><strong>Operating expenses increased faster than revenue:</strong> Cost growth of +23.8% outpaced sales trajectory.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-arrow-trend-down text-rose-600 text-xs mt-1"></i>
+                                <span><strong>Net margin declined:</strong> Net margin narrowed from 21.2% to 16.9% due to rising delivery overhead.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. "FIND WHAT NEEDS ATTENTION" (AUDIT / REVIEW SUGGESTIONS) -->
+        <section id="prototype-insights" class="py-24 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-amber-600 mb-2">Professional Review Safeguards</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Find what needs attention.
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        The future system could help professionals identify items that deserve closer inspection — without making reckless autonomous assumptions.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Flag 1 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-copy"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Potential Duplicate Invoice</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Invoice #INV-8912 and #INV-8915 share identical vendor tax IDs, dates, and amount (₹84,500).
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Ledger verification recommended</span>
+                    </div>
+
+                    <!-- Flag 2 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-file-circle-exclamation"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">GST Mismatch</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Input tax credit in purchase register differs from supplier filing in GSTR-2B by ₹6,000 for August.
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Supplier return status check</span>
+                    </div>
+
+                    <!-- Flag 3 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-arrow-trend-up"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Unusual Expense</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Office repair expense is 340% higher than the 6-month historical rolling average for this account.
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Supporting bill scrutiny required</span>
+                    </div>
+
+                    <!-- Flag 4 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-square-minus"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Missing Entry</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Bank debit entry of ₹2,15,000 has no matching journal voucher or vendor receipt allocated.
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Bank reconciliation check</span>
+                    </div>
+
+                    <!-- Flag 5 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-calendar-xmark"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Period Mismatch</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Service rendered in Q1 but invoice recorded under Q3 financial reporting period.
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Cut-off audit verification</span>
+                    </div>
+
+                    <!-- Flag 6 -->
+                    <div class="subtle-card p-6 rounded-2xl border-slate-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                                <i class="fas fa-circle-question"></i>
+                            </span>
+                            <span class="text-[11px] font-semibold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full">
+                                Review suggested
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Unexpected Transaction</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                            Direct cash withdrawal of ₹1,50,000 recorded without typical petty cash narration or approval note.
+                        </p>
+                        <span class="text-[11px] text-slate-400 block pt-2 border-t border-slate-100">Voucher authorization check</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. GST / TAX PROTOTYPE (COMPLIANCE RECONCILIATION) -->
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Tax Intelligence</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Make complex financial questions easier to investigate.
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        Simulating how Tattvo pinpoints statutory differences and provides immediate focal points for reconciliation.
+                    </p>
+                </div>
+
+                <!-- GST Prototype Card -->
+                <div class="subtle-card rounded-3xl p-6 sm:p-8 border-slate-200 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                            <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">GST Reconciliation Query</span>
+                        </div>
+                        <span class="proto-badge">
+                            Illustrative example
+                        </span>
+                    </div>
+
+                    <!-- User Question -->
+                    <div class="bg-slate-100 rounded-2xl p-4 text-xs sm:text-sm font-semibold text-slate-800 mb-6 flex items-center gap-2.5">
+                        <i class="fas fa-circle-question text-indigo-600"></i>
+                        <span>"Why doesn't this GST amount match?"</span>
+                    </div>
+
+                    <!-- Reconciliation Comparison -->
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 text-center mb-6">
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Expected (Books)</span>
+                            <span class="text-base sm:text-lg font-bold text-slate-900">₹1,24,500</span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                            <span class="text-xs text-slate-500 block mb-1">Reported (GSTR-2B)</span>
+                            <span class="text-base sm:text-lg font-bold text-slate-900">₹1,18,500</span>
+                        </div>
+                        <div class="bg-rose-50 border border-rose-200 p-4 rounded-2xl">
+                            <span class="text-xs text-rose-700 block mb-1">Difference</span>
+                            <span class="text-base sm:text-lg font-bold text-rose-700">₹6,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Possible Areas to Review -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs sm:text-sm">
+                        <span class="font-bold text-slate-900 block mb-2">Possible areas to review:</span>
+                        <ul class="space-y-2 text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-circle-chevron-right text-indigo-600 text-xs mt-1"></i>
+                                <span><strong>Invoice differences:</strong> Supplier ABC Tech filed Invoice #102 as ₹18,000 taxable rather than ₹24,000 recorded in your purchase ledger.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-circle-chevron-right text-indigo-600 text-xs mt-1"></i>
+                                <span><strong>Missing records:</strong> One logistics debit note of ₹1,080 GST has not yet been reflected in the supplier's GSTR-1.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fas fa-circle-chevron-right text-indigo-600 text-xs mt-1"></i>
+                                <span><strong>Period mismatch:</strong> Purchase invoice dated 30th August reported by vendor in September tax return.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. EVIDENCE-BACKED ANSWER (EXPANDABLE AUDIT TRAIL PROTOTYPE) -->
+        <section id="prototype-evidence" class="py-24 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Auditability</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        An answer is more useful when you can understand why.
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        Every response comes with an inspectable evidence hierarchy. Click each layer below to view the verified basis behind the conclusion.
+                    </p>
+                </div>
+
+                <!-- Evidence Card Prototype -->
+                <div class="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8">
+                    <!-- Top Answer Banner -->
+                    <div class="border-b border-slate-100 pb-5 mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Answer
+                            </span>
+                            <div class="flex gap-1.5">
+                                <span class="proto-badge text-indigo-700 bg-indigo-50/80 border-indigo-200">
+                                    <i class="fas fa-file-lines text-[10px]"></i> Document Verified
+                                </span>
+                                <span class="proto-badge text-emerald-700 bg-emerald-50/80 border-emerald-200">
+                                    <i class="fas fa-calculator text-[10px]"></i> Calculation Checked
+                                </span>
+                            </div>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">
+                            "Operating expenses increased significantly compared with the previous period."
+                        </h3>
+                    </div>
+
+                    <!-- Expandable Evidence Layers -->
+                    <div class="space-y-3">
+                        <!-- Evidence Item 1: Numbers Used -->
+                        <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 p-4 open:bg-white open:border-indigo-300 transition-colors cursor-pointer" open>
+                            <summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-slate-900 list-none">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs">
+                                        <i class="fas fa-calculator"></i>
+                                    </span>
+                                    <span>Numbers Used</span>
+                                    <span class="text-[11px] text-slate-400 font-normal">Computation Breakdown</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="pt-3 text-xs text-slate-600 border-t border-slate-100 mt-3 leading-relaxed">
+                                <p class="mb-2">Operating Expenses FY25: <strong>₹95,80,000</strong> &rarr; FY26: <strong>₹1,18,60,000</strong></p>
+                                <p class="bg-slate-100/70 p-2 rounded-lg font-mono text-slate-700">
+                                    Delta: ₹1,18,60,000 - ₹95,80,000 = +₹22,80,000 (+23.8% increase)
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- Evidence Item 2: Source Document -->
+                        <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 p-4 open:bg-white open:border-indigo-300 transition-colors cursor-pointer" open>
+                            <summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-slate-900 list-none">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Source Document</span>
+                                    <span class="text-[11px] text-slate-400 font-normal">Direct Citation</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="pt-3 text-xs text-slate-600 border-t border-slate-100 mt-3 leading-relaxed">
+                                <p><strong>Audited Profit &amp; Loss Statement (FY 2025-26):</strong> Schedule 14 (Administrative and General Expenses), Page 6, Row 18.</p>
+                            </div>
+                        </details>
+
+                        <!-- Evidence Item 3: Relevant Information -->
+                        <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 p-4 open:bg-white open:border-indigo-300 transition-colors cursor-pointer">
+                            <summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-slate-900 list-none">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs">
+                                        <i class="fas fa-layer-group"></i>
+                                    </span>
+                                    <span>Relevant Information</span>
+                                    <span class="text-[11px] text-slate-400 font-normal">Account-Level Drilldown</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="pt-3 text-xs text-slate-600 border-t border-slate-100 mt-3 leading-relaxed">
+                                <p>Two sub-ledgers contributed 82% of the increase: Cloud Hosting Services (+₹14.2L) and Contract Engineering Fees (+₹4.5L).</p>
+                            </div>
+                        </details>
+
+                        <!-- Evidence Item 4: Explanation -->
+                        <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 p-4 open:bg-white open:border-indigo-300 transition-colors cursor-pointer">
+                            <summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-slate-900 list-none">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-6 h-6 rounded-md bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </span>
+                                    <span>Explanation</span>
+                                    <span class="text-[11px] text-slate-400 font-normal">Contextual Summary</span>
+                                </div>
+                                <i class="fas fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="pt-3 text-xs text-slate-600 border-t border-slate-100 mt-3 leading-relaxed">
+                                <p>Expenses rose faster than revenue due to upfront cloud infrastructure migrations undertaken in Q3, compressing operating margin by 4.3 percentage points.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="text-center pt-5">
+                        <span class="text-[11px] text-slate-400">
+                            *Customer-level evidence verification. Internal retrieval and engineering mechanisms are abstracted.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. REPORT GENERATION PROTOTYPE -->
+        <section id="prototype-report" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Deliverable Output</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Turn analysis into something you can use.
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        Simulated future exportable client review report with findings, audit points, and supporting documentation.
+                    </p>
+                </div>
+
+                <!-- Mock Report Document Card -->
+                <div class="subtle-card rounded-3xl p-6 sm:p-10 border-slate-200/90 shadow-md">
+                    <!-- Report Header -->
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-5 mb-6">
+                        <div>
+                            <span class="text-[11px] font-bold text-indigo-700 uppercase tracking-widest block mb-1">FINANCIAL REVIEW REPORT</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900">Demo Enterprise Solutions Pvt Ltd</h3>
+                            <span class="text-xs text-slate-500">Period: FY 2025–26 • Generated by Tattvo Vision (Prototype)</span>
+                        </div>
+                        <span class="proto-badge">
+                            Prototype
+                        </span>
+                    </div>
+
+                    <!-- Report Content Sections -->
+                    <div class="space-y-6 text-xs sm:text-sm text-slate-700">
+                        <div>
+                            <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2 text-indigo-950 flex items-center gap-1.5">
+                                <i class="fas fa-chart-line text-indigo-600 text-xs"></i> 1. Key Findings
+                            </h4>
+                            <p class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/70 text-slate-600 leading-relaxed">
+                                Top-line revenue expanded to ₹142.8L (+14.2% YoY). However, net profit declined to ₹24.2L (-8.6%) primarily driven by an unbudgeted 23.8% increase in operational and server overheads.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2 text-indigo-950 flex items-center gap-1.5">
+                                <i class="fas fa-triangle-exclamation text-amber-600 text-xs"></i> 2. Areas to Review
+                            </h4>
+                            <ul class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/70 text-slate-600 space-y-2 leading-relaxed">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-600 font-bold">•</span>
+                                    <span>Verify duplicate vendor billing pattern identified in August Schedule 14.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-600 font-bold">•</span>
+                                    <span>Reconcile ₹6,000 difference between GSTR-2B input tax credit and purchase register.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-amber-600 font-bold">•</span>
+                                    <span>Audit cut-off dates for Q1 contracts booked under Q3 accounts.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2 text-indigo-950 flex items-center gap-1.5">
+                                <i class="fas fa-shield-halved text-emerald-600 text-xs"></i> 3. Supporting Evidence
+                            </h4>
+                            <p class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/70 text-slate-600 leading-relaxed">
+                                All calculations cross-verified against Audited Balance Sheet (Pg 4), P&amp;L Statement (Pg 6), and GSTR-2B filing dated 12-Sep-2026.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Simulated Action Buttons -->
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex flex-wrap gap-2.5">
+                            <button type="button" onclick="alert('Prototype demonstration: Exporting PDF report template.')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-xs">
+                                <i class="fas fa-file-pdf"></i> Export PDF
+                            </button>
+                            <button type="button" onclick="alert('Prototype demonstration: Exporting Excel spreadsheet summary.')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all">
+                                <i class="fas fa-file-excel"></i> Export Excel
+                            </button>
+                            <button type="button" onclick="alert('Prototype demonstration: Sharing report with review link.')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all">
+                                <i class="fas fa-share-nodes"></i> Share
+                            </button>
+                        </div>
+                        <span class="text-[11px] text-slate-400 italic">Simulated export actions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. WHO ARE WE BUILDING THIS FOR? -->
+        <section id="for-whom" class="py-20 bg-slate-50/60 border-t border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Target Audience</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        Who Are We Building This For?
+                    </h2>
+                    <p class="text-base text-slate-600 leading-relaxed">
+                        Our initial focus centers on two key groups who deal with financial decisions every day.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Group 1 -->
+                    <div class="subtle-card p-8 rounded-3xl border-slate-200">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl mb-6">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">
+                            Accounting &amp; Finance Professionals
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                            For practitioners who handle client files, verify ledgers, file returns, and need fast, evidence-backed answers.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Chartered Accountants (CAs)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>CA Firms &amp; Audit Teams</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Tax Practitioners &amp; GST Consultants</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Accountants &amp; Finance Controllers</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Group 2 -->
+                    <div class="subtle-card p-8 rounded-3xl border-slate-200">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center text-xl mb-6">
+                            <i class="fas fa-chart-simple"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">
+                            People Who Need to Understand Their Finances
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                            For leaders and managers who receive financial reports but need clear, actionable explanations behind the figures.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Business Owners &amp; Founders</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>SME Decision-Makers</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Finance Managers</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-indigo-600 text-xs"></i>
+                                <span>Anyone needing clear financial clarity</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. ROADMAP / WHERE THIS COULD GO -->
+        <section class="py-16 bg-white border-t border-slate-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600 mb-2">Looking Forward</p>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-4">
+                    Where This Could Go
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    The first goal is understanding and analysis. Over time, the vision could expand into deeper reconciliation, professional workflows, and continuous financial intelligence.
+                </p>
+
+                <!-- High-level roadmap steps -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold">
+                    <span class="bg-slate-50 border border-slate-200 px-4 py-2 rounded-full text-slate-800 shadow-xs">
+                        Understand
+                    </span>
+                    <span class="text-slate-300">&rarr;</span>
+                    <span class="bg-slate-50 border border-slate-200 px-4 py-2 rounded-full text-slate-800 shadow-xs">
+                        Analyze
+                    </span>
+                    <span class="text-slate-300">&rarr;</span>
+                    <span class="bg-slate-50 border border-slate-200 px-4 py-2 rounded-full text-slate-800 shadow-xs">
+                        Reconcile
+                    </span>
+                    <span class="text-slate-300">&rarr;</span>
+                    <span class="bg-slate-50 border border-slate-200 px-4 py-2 rounded-full text-slate-800 shadow-xs">
+                        Collaborate
+                    </span>
+                    <span class="text-slate-300">&rarr;</span>
+                    <span class="bg-slate-50 border border-slate-200 px-4 py-2 rounded-full text-slate-800 shadow-xs">
+                        Monitor
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. IDEA VALIDATION SECTION (PRIMARY BUSINESS PURPOSE) -->
+        <section id="validation" class="py-24 bg-slate-50/70 border-t border-slate-200 scroll-mt-10">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-indigo-700 bg-indigo-50 border border-indigo-200 mb-4">
+                        <i class="fas fa-hand-holding-heart text-indigo-600"></i> YOUR PERSPECTIVE MATTERS
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Before we build it, we want to hear from you.
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        We have an early product vision. Now we want to know whether it solves a problem people actually experience. We'd rather build something genuinely useful than build something nobody needs.
+                    </p>
+                </div>
+
+                <!-- Two Survey Cards -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- CARD 1: For Everyone -->
+                    <div class="subtle-card p-8 rounded-3xl border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-slate-600 bg-slate-100 mb-4">
+                                FOR EVERYONE
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Share Your Experience</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                                Tell us how you currently handle accounting, financial information, and financial questions — and whether a tool like this would actually be useful to you.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSU9BOLlJ6uRku5soQBR3kLg_5KAn-C7XL3xe3bO5eROtV0A/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-slate-800 font-semibold bg-slate-100 hover:bg-slate-200 transition-all text-sm group">
+                                <span>Take the User Survey</span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                            <span class="block text-center text-[11px] text-slate-400 mt-2">Takes ~3 minutes</span>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: For CAs & Accounting Professionals -->
+                    <div class="subtle-card p-8 rounded-3xl border-indigo-200 bg-gradient-to-b from-white to-indigo-50/30 flex flex-col justify-between shadow-md">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-indigo-700 bg-indigo-100 mb-4">
+                                FOR CHARTERED ACCOUNTANTS &amp; PRACTITIONERS
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">For CAs &amp; Accounting Professionals</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                                We especially want feedback from CAs and accounting professionals who work with real client data, financial statements, tax, GST, and accounting workflows.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeea2_ivBPL8yF6ekV3rewXKlBK6XPlVdxzaEexlsWRiKWyVQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-white font-semibold bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-600/20 transition-all text-sm group">
+                                <span>CA Feedback Survey</span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-indigo-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </a>
+                            <span class="block text-center text-[11px] text-slate-400 mt-2">Specialized feedback for practitioners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thoughtful company positioning note -->
+                <div class="mt-12 text-center text-xs text-slate-500 max-w-xl mx-auto leading-relaxed">
+                    We're exploring. We're validating. Help us understand what would make this truly valuable before code is written.
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. FINAL CTA SECTION -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+                    Help us build something worth building.
+                </h2>
+                <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    If you work with financial information, accounting, or business finances, your feedback can directly influence what we build next.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#validation" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-slate-900 font-semibold bg-white hover:bg-slate-100 transition-all text-sm sm:text-base">
+                        <span>Share Your Feedback</span>
+                        <i class="fas fa-arrow-up text-xs"></i>
+                    </a>
+                    <a href="index.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-slate-300 font-medium bg-slate-800 hover:bg-slate-700 transition-all text-sm sm:text-base border border-slate-700">
+                        <span>&larr; Back to TATTVO TECH</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-slate-950 text-slate-400 text-xs sm:text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-7 w-auto brightness-90">
+                <span>&copy; 2025 TATTVO TECH. All rights reserved.</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="hover:text-white transition-colors">TATTVO TECH Homepage</a>
+                <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Prototype Scripts (Frontend Simulation Only) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Menu Toggle
+            const toggleBtn = document.getElementById("vision-mobile-toggle");
+            const mobileMenu = document.getElementById("vision-mobile-menu");
+            const barsIcon = document.getElementById("vision-bars");
+            const timesIcon = document.getElementById("vision-times");
+
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+                    barsIcon.classList.toggle("hidden");
+                    timesIcon.classList.toggle("hidden");
+                });
+
+                mobileMenu.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        mobileMenu.classList.add("hidden");
+                        barsIcon.classList.remove("hidden");
+                        timesIcon.classList.add("hidden");
+                    });
+                });
+            }
+
+            // Interactive Sample File Click Handler (Simulated Document Analysis)
+            const sampleButtons = document.querySelectorAll(".sample-file-btn");
+            const idleState = document.getElementById("analysis-idle-state");
+            const loadingState = document.getElementById("analysis-loading-state");
+            const readyState = document.getElementById("analysis-ready-state");
+            const filenameEl = document.getElementById("analyzed-filename");
+
+            sampleButtons.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const selectedFile = this.getAttribute("data-file") || "Financial Document.pdf";
+                    
+                    // Show Loading
+                    idleState.classList.add("hidden");
+                    readyState.classList.add("hidden");
+                    loadingState.classList.remove("hidden");
+
+                    // Simulate 600ms AI Processing Delay
+                    setTimeout(() => {
+                        loadingState.classList.add("hidden");
+                        filenameEl.textContent = selectedFile;
+                        readyState.classList.remove("hidden");
+                    }, 650);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

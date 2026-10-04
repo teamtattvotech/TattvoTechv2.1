@@ -260,7 +260,7 @@ body {
 .card:hover::before {
     opacity: 1;
 }
-/* Fix syllabus button not clickable */
+/* Ensure links inside cards remain clickable */
 .card a {
   position: relative;
   z-index: 50;
