@@ -1,28 +1,29 @@
 window.onload = function () {
     const canvas = document.getElementById('hero-canvas');
-    const hero = document.getElementById('hero');
+    if (canvas && typeof THREE !== 'undefined') {
+        const hero = document.getElementById('hero');
 
-    const sizes = { width: window.innerWidth, height: window.innerHeight };
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000);
+        const sizes = { width: window.innerWidth, height: window.innerHeight };
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000);
 
-    // Detect mobile
-    const isMobile = window.innerWidth < 768;
+        // Detect mobile
+        const isMobile = window.innerWidth < 768;
 
-    // Adjust 3D parameters for mobile
-    const torusKnotRadius = isMobile ? 0.5 : 1.5;
-    const torusKnotTube = isMobile ? 0.2 : 0.5;
-    const particlesCount = isMobile ? 500 : 5000;
-    const cameraZ = isMobile ? 2.5 : 5;
+        // Adjust 3D parameters for mobile
+        const torusKnotRadius = isMobile ? 0.5 : 1.5;
+        const torusKnotTube = isMobile ? 0.2 : 0.5;
+        const particlesCount = isMobile ? 500 : 5000;
+        const cameraZ = isMobile ? 2.5 : 5;
 
-    camera.position.z = cameraZ;
+        camera.position.z = cameraZ;
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-    renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+        renderer.setSize(sizes.width, sizes.height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Torus Knot
-    const geometry = new THREE.TorusKnotGeometry(torusKnotRadius, torusKnotTube, 100, 16);
+        // Torus Knot
+        const geometry = new THREE.TorusKnotGeometry(torusKnotRadius, torusKnotTube, 100, 16);
     const material = new THREE.MeshBasicMaterial({ color: 0x8A2BE2, wireframe: true });
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -62,6 +63,7 @@ window.onload = function () {
     });
 
     animate();
+    }
 
     // ---------------- Smooth Scrolling ----------------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -81,14 +83,14 @@ window.onload = function () {
 
     // ---------------- Scroll To Top Button ----------------
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
     if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
