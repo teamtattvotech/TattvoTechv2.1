@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
 
-    <meta name="description" content="TATTVO TECH delivers cutting-edge technology solutions, modern web development, mobile application development, and enterprise MuleSoft integration.">
-    <meta name="keywords" content="TATTVO TECH, web development, mobile app development, MuleSoft, API integration, enterprise solutions, digital technology">
+    <meta name="description"
+        content="TATTVO TECH delivers cutting-edge technology solutions, modern web development, mobile application development, and enterprise MuleSoft integration.">
+    <meta name="keywords"
+        content="TATTVO TECH, web development, mobile app development, MuleSoft, API integration, enterprise solutions, digital technology">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="TATTVO TECH - Innovating Digital Excellence">
-    <meta property="og:description" content="Empowering businesses with modern web development, cross-platform mobile apps, and enterprise MuleSoft integration solutions.">
+    <meta property="og:description"
+        content="Empowering businesses with modern web development, cross-platform mobile apps, and enterprise MuleSoft integration solutions.">
     <meta property="og:image" content="https://placehold.co/1200x630/1f2937/d1d5db?text=TATTVO+TECH">
     <meta property="og:url" content="https://www.tattvotech.com">
 
@@ -30,6 +34,7 @@
     <script src="script.js"></script>
 
 </head>
+
 <body class="bg-gray-950 text-gray-200">
 
     <div id="scrollToTopBtn" class="scroll-to-top shadow-lg">
@@ -47,166 +52,201 @@
     </div>
 
     <header class="fixed top-0 left-0 w-full z-50 p-4 lg:px-20 backdrop-blur-sm">
-  <nav class="flex justify-between items-center max-w-7xl mx-auto">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
 
-    <!-- Logo -->
-    <a href="index.html" class="text-xl font-bold text-white tracking-wide">
-      <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-10">
-    </a>
+            <!-- Logo -->
+            <a href="index.html" class="text-xl font-bold text-white tracking-wide">
+                <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-10">
+            </a>
 
-    <!-- Desktop Links -->
-    <div class="hidden md:flex items-center space-x-8">
-      <a href="#services" class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Services</a>
-      <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">About Us</a>
-      <a href="#team" class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our Team</a>
-      <a href="#clients" class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our Clients</a>
-      <a href="#vision" class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our Vision</a>
-      <a href="#contact" class="text-xs font-semibold uppercase tracking-wider text-white bg-purple-600/90 hover:bg-purple-600 px-5 py-2.5 rounded-full transition-all duration-200 shadow-md shadow-purple-900/30">Get in Touch</a>
-    </div>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Services</a>
+                <a href="#about"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">About
+                    Us</a>
+                <a href="#team"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our
+                    Team</a>
+                <a href="#clients"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our
+                    Clients</a>
+                <a href="#vision"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our
+                    Vision</a>
+                <a href="#contact"
+                    class="text-xs font-semibold uppercase tracking-wider text-white bg-purple-600/90 hover:bg-purple-600 px-5 py-2.5 rounded-full transition-all duration-200 shadow-md shadow-purple-900/30">Get
+                    in Touch</a>
+            </div>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors focus:outline-none" aria-label="Toggle navigation">
-      <i id="bars-icon" class="fas fa-bars text-xl"></i>
-      <i id="times-icon" class="fas fa-times text-xl hidden"></i>
-    </button>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button"
+                class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors focus:outline-none"
+                aria-label="Toggle navigation">
+                <i id="bars-icon" class="fas fa-bars text-xl"></i>
+                <i id="times-icon" class="fas fa-times text-xl hidden"></i>
+            </button>
 
-  </nav>
+        </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden w-full bg-gray-900/95 backdrop-blur-md border border-gray-800 mt-3 p-4 rounded-2xl shadow-2xl">
-    <a href="#services" class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Services</a>
-    <a href="#about" class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">About Us</a>
-    <a href="#team" class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our Team</a>
-    <a href="#clients" class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our Clients</a>
-    <a href="#vision" class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our Vision</a>
-    <a href="#contact" class="block mt-2 py-2.5 px-4 text-center text-sm font-semibold text-white bg-purple-600 rounded-xl hover:bg-purple-500 transition-colors">Get in Touch</a>
-  </div>
-</header>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden w-full bg-gray-900/95 backdrop-blur-md border border-gray-800 mt-3 p-4 rounded-2xl shadow-2xl">
+            <a href="#services"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Services</a>
+            <a href="#about"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">About
+                Us</a>
+            <a href="#team"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our
+                Team</a>
+            <a href="#clients"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our
+                Clients</a>
+            <a href="#vision"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our
+                Vision</a>
+            <a href="#contact"
+                class="block mt-2 py-2.5 px-4 text-center text-sm font-semibold text-white bg-purple-600 rounded-xl hover:bg-purple-500 transition-colors">Get
+                in Touch</a>
+        </div>
+    </header>
 
 
     <main class="relative z-10">
-        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 overflow-hidden">
+        <section id="hero"
+            class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 overflow-hidden">
             <canvas id="hero-canvas" class="hero-canvas absolute inset-0 w-full h-full z-0"></canvas>
             <div class="z-10 relative">
                 <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4">
                     Innovating <span class="text-gradient">Digital</span> Excellence
                 </h1>
                 <p class="text-lg sm:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-gray-400">
-                    Empowering modern businesses with high-performance web development, mobile applications, and enterprise MuleSoft integration solutions.
+                    Empowering modern businesses with high-performance web development, mobile applications, and
+                    enterprise MuleSoft integration solutions.
                 </p>
-                <a href="#services" class="inline-block py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
+                <a href="#services"
+                    class="inline-block py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
                     Explore Our Services
                 </a>
             </div>
         </section>
 
-       <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Core Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+        <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Core Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
 
-        <!-- 1. Web Development -->
-        <div class="card p-8 rounded-2xl text-center shadow-xl">
-            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-code"></i></div>
-            <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-            <p class="text-gray-400">
-                Modern, responsive web applications, portals, and e-commerce platforms engineered with state-of-the-art frameworks, clean UI, and scalable architecture.
-            </p>
-        </div>
+                <!-- 1. Web Development -->
+                <div class="card p-8 rounded-2xl text-center shadow-xl">
+                    <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-code"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-400">
+                        Modern, responsive web applications, portals, and e-commerce platforms engineered with
+                        state-of-the-art frameworks, clean UI, and scalable architecture.
+                    </p>
+                </div>
 
-        <!-- 2. Mobile App Development -->
-        <div class="card p-8 rounded-2xl text-center shadow-xl">
-            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-mobile-alt"></i></div>
-            <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
-            <p class="text-gray-400">
-                High-performance mobile applications for Android, iOS, and cross-platform ecosystems, delivering seamless user experiences and robust functionality.
-            </p>
-        </div>
+                <!-- 2. Mobile App Development -->
+                <div class="card p-8 rounded-2xl text-center shadow-xl">
+                    <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+                    <p class="text-gray-400">
+                        High-performance mobile applications for Android, iOS, and cross-platform ecosystems, delivering
+                        seamless user experiences and robust functionality.
+                    </p>
+                </div>
 
-        <!-- 3. MuleSoft -->
-        <div class="card p-8 rounded-2xl text-center shadow-xl">
-            <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-network-wired"></i></div>
-            <h3 class="text-xl font-semibold mb-2">MuleSoft</h3>
-            <p class="text-gray-400">
-                Enterprise API integration, system connectivity, and API-led architecture designed to seamlessly unify platforms, data, and business workflows.
-            </p>
-        </div>
+                <!-- 3. MuleSoft -->
+                <div class="card p-8 rounded-2xl text-center shadow-xl">
+                    <div class="text-5xl text-purple-400 mb-4"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">MuleSoft</h3>
+                    <p class="text-gray-400">
+                        Enterprise API integration, system connectivity, and API-led architecture designed to seamlessly
+                        unify platforms, data, and business workflows.
+                    </p>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
 
 
-<section id="about" class="py-20 px-4 max-w-6xl mx-auto">
-  <div class="flex flex-col lg:flex-row items-center gap-12">
-    
-    <!-- LEFT CONTENT -->
-    <div class="lg:w-1/2">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">About TATTVO TECH</h2>
-      
-      <p class="text-lg text-gray-400 mb-6">
-        TATTVO TECH is a fast-growing technology company dedicated to delivering modern, scalable, 
-        and business-ready IT solutions. We help startups, small businesses, and large enterprises 
-        accelerate their digital transformation with innovative and future-focused services.
-      </p>
+        <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
 
-      <p class="text-lg text-gray-400 mb-6">
-        Our core capabilities center on 
-        <span class="font-semibold text-white">Web Development</span>, 
-        <span class="font-semibold text-white">Mobile App Development</span>, and 
-        <span class="font-semibold text-white">MuleSoft Integration</span>.
-        We combine creativity, technology, and engineering precision to deliver 
-        secure, user-friendly, and high-performance solutions tailored to business needs.
-      </p>
+                <!-- LEFT CONTENT -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">About TATTVO TECH</h2>
 
-      <p class="text-lg text-gray-400 mb-6">
-        As we grow, we focus on building robust digital technology and enterprise-grade software 
-        solutions that empower businesses to streamline operations, integrate systems seamlessly, 
-        and scale effectively in a rapidly advancing digital landscape.
-      </p>
+                    <p class="text-lg text-gray-400 mb-6">
+                        TATTVO TECH is a fast-growing technology company dedicated to delivering modern, scalable,
+                        and business-ready IT solutions. We help startups, small businesses, and large enterprises
+                        accelerate their digital transformation with innovative and future-focused services.
+                    </p>
 
-      <p class="text-lg text-gray-400">
-        At TATTVO TECH, we believe in innovation, transparency, and long-term partnerships.  
-        We don’t just build software — we create reliable, scalable technological foundations that help businesses 
-        grow, compete, and succeed.
-      </p>
-    </div>
+                    <p class="text-lg text-gray-400 mb-6">
+                        Our core capabilities center on
+                        <span class="font-semibold text-white">Web Development</span>,
+                        <span class="font-semibold text-white">Mobile App Development</span>, and
+                        <span class="font-semibold text-white">MuleSoft Integration</span>.
+                        We combine creativity, technology, and engineering precision to deliver
+                        secure, user-friendly, and high-performance solutions tailored to business needs.
+                    </p>
 
-    <!-- RIGHT IMAGE SLIDER -->
-    <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/about1.png" alt="Team working" class="w-full h-auto">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/about2.png" alt="Web development" class="w-full h-auto">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/about4.png" alt="Cloud & Mobile Apps" class="w-full h-auto">
-          </div>
-        </div>
-      </div>
-    </div>
+                    <p class="text-lg text-gray-400 mb-6">
+                        As we grow, we focus on building robust digital technology and enterprise-grade software
+                        solutions that empower businesses to streamline operations, integrate systems seamlessly,
+                        and scale effectively in a rapidly advancing digital landscape.
+                    </p>
 
-  </div>
-</section>
+                    <p class="text-lg text-gray-400">
+                        At TATTVO TECH, we believe in innovation, transparency, and long-term partnerships.
+                        We don’t just build software — we create reliable, scalable technological foundations that help
+                        businesses
+                        grow, compete, and succeed.
+                    </p>
+                </div>
+
+                <!-- RIGHT IMAGE SLIDER -->
+                <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets/about1.png" alt="Team working" class="w-full h-auto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/about2.png" alt="Web development" class="w-full h-auto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/about4.png" alt="Cloud & Mobile Apps" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <section id="team" class="py-20 px-4 max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Meet Our Talented Team</h2>
             <div class="flex justify-center gap-8 text-center flex-wrap">
                 <div class="card p-6 rounded-2xl shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <img src="./assets/team/team-member-1.png" alt="Vinay Yadav - Founder & CEO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <img src="./assets/team/team-member-1.png" alt="Vinay Yadav - Founder & CEO"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-lg font-semibold mb-1">Vinay Yadav</h3>
                     <p class="text-gray-400">Founder & CEO, Lead Developer</p>
                     <i class="text-gray-400">"It’s never too late to start your dream."</i>
                 </div>
                 <div class="card p-6 rounded-2xl text-center shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <img src="./assets/team/team-member-2.png" alt="Hari Priya V - Co-founder & CMO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <img src="./assets/team/team-member-2.png" alt="Hari Priya V - Co-founder & CMO"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-lg font-semibold mb-1">Hari Priya V</h3>
                     <p class="text-gray-400">Co-founder & CMO, UI/UX</p>
                     <i class="text-gray-400">"Taking the first step is the key to progress"</i>
                 </div>
                 <div class="card p-6 rounded-2xl text-center shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <img src="./assets/team/team-member-3.jpeg" alt="Jay Sai Kiran K - Co-founder & CTO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <img src="./assets/team/team-member-3.jpeg" alt="Jay Sai Kiran K - Co-founder & CTO"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h3 class="text-lg font-semibold mb-1">Jaya Sai Kiran K</h3>
                     <p class="text-gray-400">Co-founder & CTO, CRM Specialist</p>
                     <i class="text-gray-400">"When we do the work we love, growth and profit follow naturally."</i>
@@ -217,34 +257,48 @@
         <section id="clients" class="py-20 px-4 max-w-6xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Trusted by Our Clients</h2>
             <div class="flex justify-center gap-8 items-center flex-wrap">
-                <a href="https://squaremeterls.com/" target="_blank"><img src="./assets/Square meter.jpeg" alt="Square meter Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
-                <a href="https://lushlayerss.com/" target="_blank"><img src="./assets/LL.jpeg" alt="Lush Layers Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
-                <a href="https://stjosephshospital.it.com/" target="_blank"><img src="./assets/St jos.jpeg" alt="stjosephshospital Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
-                <a href="https://forceinfo.netlify.app/" target="_blank"><img src="./assets/Forceinfologo.png" alt="Forceinfo Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
-                <a href="https://nakshavastra.netlify.app/" target="_blank"><img src="./assets/Naksha Vastra.png" alt="Nakshavastra Logo" class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://squaremeterls.com/" target="_blank"><img src="./assets/Square meter.jpeg"
+                        alt="Square meter Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://lushlayerss.com/" target="_blank"><img src="./assets/LL.jpeg" alt="Lush Layers Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://stjosephshospital.it.com/" target="_blank"><img src="./assets/St jos.jpeg"
+                        alt="stjosephshospital Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://redslimestudio.com/" target="_blank"><img src="./assets/RSS Logo.png"
+                        alt="Red Slime Studio Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://themarshans.shop/" target="_blank"><img src="./assets/Mar Logo.png"
+                        alt="The Marshans Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
+                <a href="https://chipakk.shop/" target="_blank"><img src="./assets/CK Logo.png" alt="Chipakk Logo"
+                        class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"></a>
             </div>
         </section>
 
-<section id="vision" class="py-24 px-4 max-w-5xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-purple-300 bg-purple-900/40 border border-purple-500/30 mb-6">
-        <i class="fas fa-sparkles text-purple-400"></i> TATTVO VISION
-    </div>
-    <h2 class="text-3xl sm:text-5xl font-extrabold mb-6 tracking-tight">
-        Building the next generation of <span class="text-gradient">financial intelligence.</span>
-    </h2>
-    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-        We're exploring a specialized AI that could make accounting, financial information and analysis easier to understand — giving clarity and evidence behind the numbers.
-    </p>
-    <div>
-        <a href="tattvo-vision.html" class="inline-flex items-center gap-3 py-3.5 px-8 rounded-full text-white font-semibold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg hover:shadow-purple-500/25 group">
-            <span>Explore Tattvo Vision</span>
-            <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
-        </a>
-    </div>
-</section>
+        <section id="vision" class="py-24 px-4 max-w-5xl mx-auto text-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-purple-300 bg-purple-900/40 border border-purple-500/30 mb-6">
+                <i class="fas fa-sparkles text-purple-400"></i> TATTVO VISION
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-6 tracking-tight">
+                Building the next generation of <span class="text-gradient">financial intelligence.</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                We're exploring a specialized AI that could make accounting, financial information and analysis easier
+                to understand — giving clarity and evidence behind the numbers.
+            </p>
+            <div>
+                <a href="tattvo-vision.html"
+                    class="inline-flex items-center gap-3 py-3.5 px-8 rounded-full text-white font-semibold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg hover:shadow-purple-500/25 group">
+                    <span>Explore Tattvo Vision</span>
+                    <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </section>
 
 
-         <section id="contact" class="py-20 px-4 max-w-6xl mx-auto">
+        <section id="contact" class="py-20 px-4 max-w-6xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">
                 Get in Touch
             </h2>
@@ -253,44 +307,52 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="first_name" class="block text-sm font-medium mb-1">First Name</label>
-                            <input id="first_name" name="first_name" type="text" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                            <input id="first_name" name="first_name" type="text" required
+                                class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                         </div>
 
                         <div>
                             <label for="last_name" class="block text-sm font-medium mb-1">Last Name</label>
-                            <input id="last_name" name="last_name" type="text" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                            <input id="last_name" name="last_name" type="text" required
+                                class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="email" class="block text-sm font-medium mb-1">Email</label>
-                            <input id="email" name="email" type="email" required class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                            <input id="email" name="email" type="email" required
+                                class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                         </div>
 
                         <div>
                             <label for="mobile" class="block text-sm font-medium mb-1">Mobile</label>
-                            <input id="mobile" name="mobile" type="tel" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                            <input id="mobile" name="mobile" type="tel"
+                                class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                         </div>
                     </div>
 
                     <div>
                         <label for="title" class="block text-sm font-medium mb-1">Title</label>
-                        <input id="title" name="title" type="text" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        <input id="title" name="title" type="text"
+                            class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                     </div>
 
                     <div>
                         <label for="company" class="block text-sm font-medium mb-1">Company</label>
-                        <input id="company" name="company" type="text" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
+                        <input id="company" name="company" type="text"
+                            class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
                     </div>
 
                     <div>
                         <label for="description" class="block text-sm font-medium mb-1">Description</label>
-                        <textarea id="description" name="description" rows="4" class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"></textarea>
+                        <textarea id="description" name="description" rows="4"
+                            class="w-full p-3 rounded-lg bg-gray-700 border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
+                        <button type="submit"
+                            class="py-3 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg">
                             Send Message
                         </button>
                     </div>
@@ -301,11 +363,13 @@
     </main>
 
     <footer class="py-8 px-4 text-center text-gray-500 border-t border-gray-800 mt-12">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-x-8 md:space-y-0 text-white">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-x-8 md:space-y-0 text-white">
             <div class="flex-1 text-left">
                 <h3 class="font-bold mb-4">Our Vision</h3>
                 <p class="text-sm leading-relaxed text-gray-400">
-                    To be a trusted industry leader, delivering exceptional services through modern technology, while continuously growing and creating lasting value for our clients.
+                    To be a trusted industry leader, delivering exceptional services through modern technology, while
+                    continuously growing and creating lasting value for our clients.
                 </p>
             </div>
 
@@ -313,7 +377,8 @@
                 <h3 class="font-bold mb-4">Services</h3>
                 <ul class="space-y-2 text-sm text-gray-400">
                     <li><a href="#services" class="hover:text-purple-400 transition-colors">Web Development</a></li>
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Mobile App Development</a></li>
+                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Mobile App Development</a>
+                    </li>
                     <li><a href="#services" class="hover:text-purple-400 transition-colors">MuleSoft</a></li>
                 </ul>
             </div>
@@ -334,15 +399,21 @@
             <div class="flex-1 text-left md:text-right">
                 <h3 class="font-bold mb-4">Follow Us</h3>
                 <div class="flex space-x-4 mb-4 justify-start md:justify-end">
-                    <a href="https://x.com/TattvoTech?t=g-LQDmT6fKnVeJkjeaHB5A&s=08"class="text-xl hover:text-purple-400 transition-colors" target="_blank">
+                    <a href="https://x.com/TattvoTech?t=g-LQDmT6fKnVeJkjeaHB5A&s=08"
+                        class="text-xl hover:text-purple-400 transition-colors" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.973 6.817H1.674l7.73-8.823L1.254 2.25h7.08l4.713 6.231 5.197-6.231z"/>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.973 6.817H1.674l7.73-8.823L1.254 2.25h7.08l4.713 6.231 5.197-6.231z" />
                         </svg>
                     </a>
-                    <a href="https://wa.me/message/HA3FPKEQLAZJN1" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/company/tattvo-tech/" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/tattvotech?igsh=emszMWo0YXhkd281" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@tattvotech?si=QdRjD6iqTS71AOgL" class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/message/HA3FPKEQLAZJN1"
+                        class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/tattvo-tech/"
+                        class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/tattvotech?igsh=emszMWo0YXhkd281"
+                        class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@tattvotech?si=QdRjD6iqTS71AOgL"
+                        class="text-xl hover:text-purple-400 transition-colors"><i class="fab fa-youtube"></i></a>
                 </div>
                 <h3 class="font-bold mb-4">Contact</h3>
                 <div class="text-sm space-y-1 text-gray-400">
@@ -355,4 +426,5 @@
     </footer>
 
 </body>
+
 </html>
