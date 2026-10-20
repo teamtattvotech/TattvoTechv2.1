@@ -191,20 +191,176 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-// 3D Tilt on Cards
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
+// ---------------- Service Inquiry Auto-Selection ----------------
+document.addEventListener("DOMContentLoaded", function () {
+    const serviceSelect = document.getElementById("service_required");
+    if (serviceSelect) {
+        document.querySelectorAll("[data-service-select]").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const requestedService = this.getAttribute("data-service-select");
+                if (requestedService) {
+                    for (let i = 0; i < serviceSelect.options.length; i++) {
+                        if (serviceSelect.options[i].value === requestedService) {
+                            serviceSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    }
 
-        const rotateX = (y / 20) * -1;
-        const rotateY = x / 20;
+    // ---------------- Contact Form Submission & Lead Tracking ----------------
+    const form = document.getElementById("project-inquiry-form");
+    const statusDiv = document.getElementById("form-status");
+    const submitBtn = document.getElementById("form-submit-btn");
+    const submitText = document.getElementById("submit-btn-text");
+    const submitSpinner = document.getElementById("submit-btn-spinner");
 
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    if (form) {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // Client-side HTML5 validation check
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // In-flight state
+            if (submitBtn) submitBtn.disabled = true;
+            if (submitText) submitText.textContent = "Sending inquiry...";
+            if (submitSpinner) submitSpinner.classList.remove("hidden");
+            if (statusDiv) {
+                statusDiv.className = "hidden mb-6 rounded-2xl p-4 text-sm font-medium border";
+                statusDiv.innerHTML = "";
+            }
+
+            const formData = new FormData(form);
+            const selectedService = formData.get("service") || "Unspecified";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    // Success state
+                    if (statusDiv) {
+                        statusDiv.className = "mb-6 rounded-2xl p-4 text-sm font-medium border border-emerald-500/40 bg-emerald-950/40 text-emerald-200 block";
+                        statusDiv.innerHTML = '<div class="flex items-start gap-3"><i class="fas fa-check-circle text-emerald-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Inquiry Received</p><p>Thank you! Your project inquiry has been sent successfully. Our team will review your requirements and respond within 1 business day.</p></div></div>';
+                    }
+                    form.reset();
+
+                    // GA4 Conversion Tracking - strictly non-PII
+                    if (typeof gtag === "function") {
+                        gtag("event", "generate_lead", {
+                            event_category: "Contact",
+                            service_requested: selectedService
+                        });
+                    }
+                } else {
+                    const data = await response.json().catch(() => ({}));
+                    let errorMsg = "There was a problem submitting your inquiry. Please try again or reach out directly.";
+                    if (data && data.errors && Array.isArray(data.errors) && data.errors.length > 0) {
+                        errorMsg = data.errors.map(err => err.message).join(", ");
+                    }
+                    if (statusDiv) {
+                        statusDiv.className = "mb-6 rounded-2xl p-4 text-sm font-medium border border-red-500/40 bg-red-950/40 text-red-200 block";
+                        statusDiv.innerHTML = `<div class="flex items-start gap-3"><i class="fas fa-exclamation-triangle text-red-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Submission Notice</p><p>${errorMsg}</p><p class="mt-2 text-xs text-red-300">You can also email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+917075899111" class="underline font-semibold text-white">+91-7075899111</a>.</p></div></div>`;
+                    }
+                }
+            } catch (err) {
+                if (statusDiv) {
+                    statusDiv.className = "mb-6 rounded-2xl p-4 text-sm font-medium border border-amber-500/40 bg-amber-950/40 text-amber-200 block";
+                    statusDiv.innerHTML = '<div class="flex items-start gap-3"><i class="fas fa-wifi text-amber-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Network Issue</p><p>Unable to connect to the submission service. Please email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+917075899111" class="underline font-semibold text-white">+91-7075899111</a>.</p></div></div>';
+                }
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+                if (submitText) submitText.textContent = "Send Project Inquiry";
+                if (submitSpinner) submitSpinner.classList.add("hidden");
+            }
+        });
+    }
+
+    // ---------------- CTA & Contact Click Tracking (Non-PII) ----------------
+    // 1. Primary CTAs
+    document.querySelectorAll('a[href="#contact"]').forEach(cta => {
+        cta.addEventListener("click", function () {
+            if (typeof gtag === "function") {
+                gtag("event", "cta_click", {
+                    cta_location: this.closest("header") ? "header" : (this.closest("#hero") ? "hero" : "page"),
+                    cta_text: this.innerText.trim() || "Contact"
+                });
+            }
+        });
     });
 
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+    // 2. Service card inquire buttons
+    document.querySelectorAll("[data-service-select]").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const requestedService = this.getAttribute("data-service-select");
+            if (typeof gtag === "function") {
+                gtag("event", "service_inquire_click", {
+                    service_name: requestedService || "Unknown"
+                });
+            }
+        });
+    });
+
+    // 3. Direct Contact Links (phone, email, whatsapp)
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener("click", function () {
+            if (typeof gtag === "function") {
+                gtag("event", "contact_phone_click", {
+                    event_category: "Engagement"
+                });
+            }
+        });
+    });
+
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener("click", function () {
+            if (typeof gtag === "function") {
+                gtag("event", "contact_email_click", {
+                    event_category: "Engagement"
+                });
+            }
+        });
+    });
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener("click", function () {
+            if (typeof gtag === "function") {
+                gtag("event", "contact_whatsapp_click", {
+                    event_category: "Engagement"
+                });
+            }
+        });
     });
 });
+
+// 3D Tilt on Cards (respects reduced-motion preference)
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!prefersReducedMotion) {
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            const rotateX = (y / 20) * -1;
+            const rotateY = x / 20;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+        });
+    });
+}
