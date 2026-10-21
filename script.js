@@ -271,13 +271,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     if (statusDiv) {
                         statusDiv.className = "mb-6 rounded-2xl p-4 text-sm font-medium border border-red-500/40 bg-red-950/40 text-red-200 block";
-                        statusDiv.innerHTML = `<div class="flex items-start gap-3"><i class="fas fa-exclamation-triangle text-red-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Submission Notice</p><p>${errorMsg}</p><p class="mt-2 text-xs text-red-300">You can also email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+917075899111" class="underline font-semibold text-white">+91-7075899111</a>.</p></div></div>`;
+                        statusDiv.innerHTML = `<div class="flex items-start gap-3"><i class="fas fa-exclamation-triangle text-red-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Submission Notice</p><p>${errorMsg}</p><p class="mt-2 text-xs text-red-300">You can also email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+918790340337" class="underline font-semibold text-white">+91 8790340337</a>.</p></div></div>`;
                     }
                 }
             } catch (err) {
                 if (statusDiv) {
                     statusDiv.className = "mb-6 rounded-2xl p-4 text-sm font-medium border border-amber-500/40 bg-amber-950/40 text-amber-200 block";
-                    statusDiv.innerHTML = '<div class="flex items-start gap-3"><i class="fas fa-wifi text-amber-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Network Issue</p><p>Unable to connect to the submission service. Please email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+917075899111" class="underline font-semibold text-white">+91-7075899111</a>.</p></div></div>';
+                    statusDiv.innerHTML = '<div class="flex items-start gap-3"><i class="fas fa-wifi text-amber-400 text-lg mt-0.5"></i><div><p class="font-bold text-white mb-1">Network Issue</p><p>Unable to connect to the submission service. Please email us directly at <a href="mailto:info@tattvotech.com" class="underline font-semibold text-white">info@tattvotech.com</a> or call <a href="tel:+918790340337" class="underline font-semibold text-white">+91 8790340337</a>.</p></div></div>';
                 }
             } finally {
                 if (submitBtn) submitBtn.disabled = false;
