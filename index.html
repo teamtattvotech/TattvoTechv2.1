@@ -2,17 +2,20 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4D9GLDBT1"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) with Consent Mode: analytics storage is denied by default for EEA/UK/CH visitors until they accept -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+      gtag('consent', 'default', { analytics_storage: 'denied', region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'] });
+      try { var c = localStorage.getItem('tt_analytics_consent'); if (c) gtag('consent', 'update', { analytics_storage: c }); } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-H4D9GLDBT1');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TATTVO TECH | Web Development, Mobile Apps &amp; MuleSoft</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4D9GLDBT1"></script>
+    <title>Website &amp; Frontend Development for Agencies and Businesses | TATTVO TECH</title>
 
     <link rel="canonical" href="https://tattvotech.com/">
 
@@ -20,16 +23,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
+    <meta name="theme-color" content="#030712">
 
     <meta name="description"
-        content="TATTVO TECH helps businesses build modern websites and mobile applications and connect business systems through MuleSoft integration. Discuss your project with our team.">
-    <meta name="keywords"
-        content="TATTVO TECH, Tattvo Tech, website development, mobile app development, MuleSoft integration, Salesforce integration, API integration, business software">
+        content="India-based development team building websites, frontend implementations and custom web applications for digital agencies and small businesses. White-label collaboration available. Discuss your project.">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="TATTVO TECH | Web Development, Mobile Apps &amp; MuleSoft">
+    <meta property="og:title" content="Website &amp; Frontend Development for Agencies and Businesses | TATTVO TECH">
     <meta property="og:description"
-        content="TATTVO TECH helps businesses build modern websites and mobile applications and connect business systems through MuleSoft integration. Discuss your project with our team.">
+        content="Websites, frontend implementation and custom web applications for digital agencies and growing businesses. Clear scope, clear communication, practical delivery.">
     <meta property="og:image" content="https://tattvotech.com/assets/logo.png">
     <meta property="og:url" content="https://tattvotech.com/">
     <meta property="og:type" content="website">
@@ -39,9 +41,9 @@
     <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@TattvoTech">
-    <meta name="twitter:title" content="TATTVO TECH | Web Development, Mobile Apps &amp; MuleSoft">
+    <meta name="twitter:title" content="Website &amp; Frontend Development for Agencies and Businesses | TATTVO TECH">
     <meta name="twitter:description"
-        content="TATTVO TECH helps businesses build modern websites and mobile applications and connect business systems through MuleSoft integration. Discuss your project with our team.">
+        content="Websites, frontend implementation and custom web applications for digital agencies and growing businesses. Clear scope, clear communication, practical delivery.">
     <meta name="twitter:image" content="https://tattvotech.com/assets/logo.png">
 
     <!-- Structured Data (JSON-LD) -->
@@ -57,15 +59,21 @@
           "url": "https://tattvotech.com/",
           "logo": "https://tattvotech.com/assets/logo.png",
           "image": "https://tattvotech.com/assets/logo.png",
-          "description": "TATTVO TECH helps businesses build modern websites and mobile applications and connect business systems through MuleSoft integration.",
+          "description": "India-based development team providing website development, frontend development, custom web applications and website maintenance for agencies and businesses.",
           "email": "info@tattvotech.com",
           "telephone": "+91-8790340337",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          },
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-8790340337",
-            "contactType": "customer service",
-            "email": "info@tattvotech.com"
+            "contactType": "sales",
+            "email": "info@tattvotech.com",
+            "availableLanguage": "English"
           },
+          "knowsAbout": ["Website development", "Frontend development", "Custom web applications", "Website maintenance"],
           "sameAs": [
             "https://x.com/TattvoTech",
             "https://www.linkedin.com/company/tattvo-tech/",
@@ -88,645 +96,649 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
     <link rel="stylesheet" href="style.css">
 
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="consent.js"></script>
 
 </head>
 
 <body class="bg-gray-950 text-gray-200">
 
-    <div id="scrollToTopBtn" class="scroll-to-top shadow-lg">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <div id="side-nav" class="hidden md:flex">
+    <button type="button" id="scrollToTopBtn" class="scroll-to-top shadow-lg" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <nav id="side-nav" class="hidden md:flex" aria-label="Section navigation">
         <a href="#hero" class="nav-dot active" data-section="hero"><span>Home</span></a>
         <a href="#services" class="nav-dot" data-section="services"><span>Services</span></a>
+        <a href="#agencies" class="nav-dot" data-section="agencies"><span>For Agencies</span></a>
         <a href="#work" class="nav-dot" data-section="work"><span>Our Work</span></a>
         <a href="#process" class="nav-dot" data-section="process"><span>How We Work</span></a>
+        <a href="#engagement" class="nav-dot" data-section="engagement"><span>Pricing</span></a>
         <a href="#about" class="nav-dot" data-section="about"><span>About Us</span></a>
-        <a href="#team" class="nav-dot" data-section="team"><span>Our Team</span></a>
         <a href="#contact" class="nav-dot" data-section="contact"><span>Contact</span></a>
-    </div>
+    </nav>
 
-    <header class="fixed top-0 left-0 w-full z-50 p-4 lg:px-20 backdrop-blur-sm">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+    <header class="fixed top-0 left-0 w-full z-50 p-4 lg:px-20 backdrop-blur-sm bg-gray-950/60">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto" aria-label="Main navigation">
 
             <!-- Logo -->
-            <a href="index.html" class="text-xl font-bold text-white tracking-wide">
-                <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-10">
+            <a href="index.html" class="text-xl font-bold text-white tracking-wide" aria-label="TATTVO TECH home">
+                <img src="./assets/img/logo.webp" alt="TATTVO TECH" width="231" height="40" class="h-10 w-auto">
             </a>
 
             <!-- Desktop Links -->
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden lg:flex items-center space-x-7">
                 <a href="#services"
                     class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Services</a>
+                <a href="#agencies"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">For Agencies</a>
                 <a href="#work"
                     class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our Work</a>
                 <a href="#process"
                     class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">How We Work</a>
+                <a href="#engagement"
+                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Pricing</a>
                 <a href="#about"
                     class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">About Us</a>
-                <a href="#team"
-                    class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 tracking-wide">Our Team</a>
                 <a href="#contact"
-                    class="text-xs font-semibold uppercase tracking-wider text-white bg-purple-600/90 hover:bg-purple-600 px-5 py-2.5 rounded-full transition-all duration-200 shadow-md shadow-purple-900/30">Discuss Your Project</a>
+                    class="text-xs font-semibold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 px-5 py-2.5 rounded-full transition-all duration-200 shadow-md shadow-purple-900/30">Discuss Your Project</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button"
-                class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors focus:outline-none"
-                aria-label="Toggle navigation">
-                <i id="bars-icon" class="fas fa-bars text-xl"></i>
-                <i id="times-icon" class="fas fa-times text-xl hidden"></i>
+            <button id="mobile-menu-button" type="button"
+                class="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+                <i id="bars-icon" class="fas fa-bars text-xl" aria-hidden="true"></i>
+                <i id="times-icon" class="fas fa-times text-xl hidden" aria-hidden="true"></i>
             </button>
 
         </nav>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden w-full bg-gray-900/95 backdrop-blur-md border border-gray-800 mt-3 p-4 rounded-2xl shadow-2xl">
+            class="hidden lg:hidden w-full bg-gray-900/95 backdrop-blur-md border border-gray-800 mt-3 p-4 rounded-2xl shadow-2xl">
             <a href="#services"
                 class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Services</a>
+            <a href="#agencies"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">For Agencies</a>
             <a href="#work"
                 class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our Work</a>
             <a href="#process"
                 class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">How We Work</a>
+            <a href="#engagement"
+                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Pricing</a>
             <a href="#about"
                 class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">About Us</a>
-            <a href="#team"
-                class="block py-2.5 px-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors">Our Team</a>
             <a href="#contact"
-                class="block mt-2 py-2.5 px-4 text-center text-sm font-semibold text-white bg-purple-600 rounded-xl hover:bg-purple-500 transition-colors">Discuss Your Project</a>
+                class="block mt-2 py-2.5 px-4 text-center text-sm font-semibold text-white bg-purple-700 rounded-xl hover:bg-purple-600 transition-colors">Discuss Your Project</a>
         </div>
     </header>
 
 
-    <main class="relative z-10">
+    <main id="main" class="relative z-10">
+        <!-- HERO -->
         <section id="hero"
-            class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 overflow-hidden">
-            <canvas id="hero-canvas" class="hero-canvas absolute inset-0 w-full h-full z-0"></canvas>
+            class="relative min-h-screen flex flex-col items-center justify-center text-center p-4 pt-28 overflow-hidden">
+            <canvas id="hero-canvas" class="hero-canvas absolute inset-0 w-full h-full z-0" aria-hidden="true"></canvas>
+            <div class="hero-overlay" aria-hidden="true"></div>
             <div class="z-10 relative max-w-4xl mx-auto px-4">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-purple-300 bg-purple-900/40 border border-purple-500/30 mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for New Projects
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                    Technology Solutions <br class="hidden sm:inline" /><span class="text-gradient">Built Around Your Business</span>
+                <p class="inline-flex flex-wrap justify-center items-center gap-x-2 gap-y-1 px-4 py-1.5 rounded-2xl sm:rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-purple-200 bg-purple-900/40 border border-purple-500/30 mb-6">
+                    <span>Website Development</span><span aria-hidden="true">·</span><span>Frontend Engineering</span><span aria-hidden="true">·</span><span>Custom Web Solutions</span>
+                </p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight leading-tight text-white">
+                    Reliable Development Support <br class="hidden sm:inline" /><span class="text-gradient">for Agencies and Growing Businesses</span>
                 </h1>
-                <p class="text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto text-gray-300 leading-relaxed font-normal">
-                    We help businesses build websites and mobile applications and connect their systems through MuleSoft and Salesforce integration.
+                <p class="text-lg sm:text-xl mb-10 max-w-3xl mx-auto text-gray-300 leading-relaxed font-normal">
+                    TATTVO TECH helps businesses and digital agencies deliver websites, frontend experiences, and custom web solutions through clear communication, defined project scopes, and practical technical execution.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#contact"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 transition-all shadow-lg hover:shadow-purple-500/25">
                         <span>Discuss Your Project</span>
-                        <i class="fas fa-arrow-right text-sm"></i>
+                        <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
                     </a>
-                    <a href="#services"
+                    <a href="#work"
                         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-8 rounded-full text-gray-200 hover:text-white font-semibold bg-gray-900/80 hover:bg-gray-800 border border-gray-700 transition-all">
-                        <span>Explore Our Services</span>
-                        <i class="fas fa-layer-group text-sm text-purple-400"></i>
+                        <span>Explore Our Work</span>
+                        <i class="fas fa-layer-group text-sm text-purple-400" aria-hidden="true"></i>
                     </a>
                 </div>
+                <ul class="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+                    <li class="inline-flex items-center justify-center gap-2"><i class="fas fa-location-dot text-purple-400" aria-hidden="true"></i> Based in India, working with clients remotely</li>
+                    <li class="inline-flex items-center justify-center gap-2"><i class="fas fa-file-signature text-purple-400" aria-hidden="true"></i> Scope and price agreed before work starts</li>
+                    <li class="inline-flex items-center justify-center gap-2"><i class="fas fa-handshake text-purple-400" aria-hidden="true"></i> White-label work for agencies</li>
+                </ul>
             </div>
         </section>
 
         <!-- CORE SERVICES -->
         <section id="services" class="py-20 px-4 max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Capabilities</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our Services</h2>
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Services</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">What We Can Build for You</h2>
                 <p class="text-gray-400 text-base sm:text-lg">
-                    We build digital solutions that help businesses establish their online presence, develop useful applications, and connect business systems.
+                    Our core focus is websites, frontend implementation, and practical web applications. Every engagement starts with an agreed scope, so you know what will be delivered before work begins.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
 
-                <!-- 01. Website Development -->
-                <div class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40 hover:border-purple-500/40 transition-all">
+                <!-- A. Website Development -->
+                <article class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40">
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-purple-400 font-semibold tracking-wider">01</span>
-                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl" aria-hidden="true">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl shrink-0" aria-hidden="true">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
+                            <h3 class="text-xl font-bold text-white">Website Development</h3>
                         </div>
-                        <h3 class="text-xl font-bold mb-2.5 text-white">Website Development</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                            Business websites, responsive web applications, and custom portals tailored to your requirements.
-                        </p>
-                        <div class="space-y-1.5 mb-6 text-xs text-gray-400 border-t border-gray-800/80 pt-4">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Custom business &amp; corporate websites</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Responsive web applications &amp; portals</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Performance, SEO &amp; mobile responsiveness</span>
-                            </div>
-                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4"><span class="font-semibold text-white">The challenge:</span> your business needs a website that clearly explains what you do and makes it easy for visitors to get in touch.</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">What we deliver</p>
+                        <ul class="space-y-1.5 mb-4 text-sm text-gray-300">
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Business and multi-page websites</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Responsive landing pages</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Redesigns of existing websites</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Contact forms, galleries, maps, analytics and similar integrations</span></li>
+                        </ul>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6 border-t border-gray-800/80 pt-4"><span class="font-semibold text-gray-200">Outcome:</span> a fast, responsive website you can share with confidence and that supports new inquiries.</p>
                     </div>
-                    <div>
-                        <a href="#contact" data-service-select="Website Development" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors" aria-label="Inquire about Website Development">
-                            <span>Discuss Requirements</span>
-                            <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
+                    <a href="#contact" data-service-select="Website Development" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                        <span>Discuss This Service<span class="sr-only">: Website Development</span></span>
+                        <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </article>
 
-                <!-- 02. Mobile App Development -->
-                <div class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40 hover:border-purple-500/40 transition-all">
+                <!-- B. Frontend Development -->
+                <article class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40">
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-purple-400 font-semibold tracking-wider">02</span>
-                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl" aria-hidden="true">
-                                <i class="fas fa-mobile-screen-button"></i>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl shrink-0" aria-hidden="true">
+                                <i class="fas fa-code"></i>
                             </div>
+                            <h3 class="text-xl font-bold text-white">Frontend Development</h3>
                         </div>
-                        <h3 class="text-xl font-bold mb-2.5 text-white">Mobile App Development</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                            Mobile applications designed around your users, business processes, and functional needs.
-                        </p>
-                        <div class="space-y-1.5 mb-6 text-xs text-gray-400 border-t border-gray-800/80 pt-4">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Cross-platform iOS &amp; Android apps</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>User-centric workflows &amp; clean UI</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>API &amp; backend service integration</span>
-                            </div>
-                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4"><span class="font-semibold text-white">The challenge:</span> you have approved designs and need them turned into working, responsive pages that match the design closely.</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">What we deliver</p>
+                        <ul class="space-y-1.5 mb-4 text-sm text-gray-300">
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Design-to-code implementation of approved designs</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Responsive layouts for desktop, tablet and mobile</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Reusable, component-based UI</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Cross-browser and basic accessibility checks</span></li>
+                        </ul>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6 border-t border-gray-800/80 pt-4"><span class="font-semibold text-gray-200">Outcome:</span> pages that look like the approved design and behave correctly on every common screen size.</p>
                     </div>
-                    <div>
-                        <a href="#contact" data-service-select="Mobile App Development" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors" aria-label="Inquire about Mobile App Development">
-                            <span>Discuss Requirements</span>
-                            <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
+                    <a href="#contact" data-service-select="Frontend Development" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                        <span>Discuss This Service<span class="sr-only">: Frontend Development</span></span>
+                        <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </article>
 
-                <!-- 03. MuleSoft Integration -->
-                <div class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40 hover:border-purple-500/40 transition-all">
+                <!-- C. Custom Web Applications -->
+                <article class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40">
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-purple-400 font-semibold tracking-wider">03</span>
-                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl" aria-hidden="true">
-                                <i class="fas fa-network-wired"></i>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl shrink-0" aria-hidden="true">
+                                <i class="fas fa-table-columns"></i>
                             </div>
+                            <h3 class="text-xl font-bold text-white">Custom Web Applications</h3>
                         </div>
-                        <h3 class="text-xl font-bold mb-2.5 text-white">MuleSoft Integration</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                            API-led integration solutions that help connect applications, data, and business systems.
-                        </p>
-                        <div class="space-y-1.5 mb-6 text-xs text-gray-400 border-t border-gray-800/80 pt-4">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>API-led connectivity (System, Process, Experience)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Connecting databases, ERPs &amp; SaaS tools</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Reliable data synchronization &amp; transformation</span>
-                            </div>
-                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4"><span class="font-semibold text-white">The challenge:</span> spreadsheets, email threads or manual steps are slowing down a business process, or your website needs functionality off-the-shelf tools don't provide.</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">What we deliver</p>
+                        <ul class="space-y-1.5 mb-4 text-sm text-gray-300">
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Dashboards and internal business tools</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Multi-step forms and data capture</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>API-connected features and third-party integrations</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>User accounts, carts and online payments where required</span></li>
+                        </ul>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6 border-t border-gray-800/80 pt-4"><span class="font-semibold text-gray-200">Outcome:</span> a focused tool that fits the way your team works, built to an agreed scope.</p>
                     </div>
-                    <div>
-                        <a href="#contact" data-service-select="MuleSoft Integration" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors" aria-label="Inquire about MuleSoft Integration">
-                            <span>Discuss Requirements</span>
-                            <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
+                    <a href="#contact" data-service-select="Custom Web Application" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                        <span>Discuss This Service<span class="sr-only">: Custom Web Applications</span></span>
+                        <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </article>
 
-                <!-- 04. Salesforce Integration -->
-                <div class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40 hover:border-purple-500/40 transition-all">
+                <!-- D. Website Maintenance & Improvements -->
+                <article class="card p-7 rounded-2xl flex flex-col justify-between shadow-xl text-left border border-gray-800 bg-gray-900/40">
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-purple-400 font-semibold tracking-wider">04</span>
-                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl" aria-hidden="true">
-                                <i class="fab fa-salesforce"></i>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 text-xl shrink-0" aria-hidden="true">
+                                <i class="fas fa-screwdriver-wrench"></i>
                             </div>
+                            <h3 class="text-xl font-bold text-white">Website Maintenance &amp; Improvements</h3>
                         </div>
-                        <h3 class="text-xl font-bold mb-2.5 text-white">Salesforce Integration</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                            Available for technical consultation to evaluate CRM connectivity with your business tools. Implementation scope and delivery availability are assessed per project before acceptance.
-                        </p>
-                        <div class="space-y-1.5 mb-6 text-xs text-gray-400 border-t border-gray-800/80 pt-4">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Initial architecture &amp; feasibility consultation</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Evaluating CRM connectivity with web &amp; internal platforms</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check text-purple-400 text-[10px]"></i>
-                                <span>Implementation scope &amp; delivery confirmed per project</span>
-                            </div>
-                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4"><span class="font-semibold text-white">The challenge:</span> an existing website has bugs, layout problems or overdue updates, and nobody on your side has time to handle them.</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">What we deliver</p>
+                        <ul class="space-y-1.5 mb-4 text-sm text-gray-300">
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Bug fixes and layout corrections</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Speed, on-page SEO and accessibility improvements</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Content and technical updates</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Deployment, domain, DNS and hosting support</span></li>
+                        </ul>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6 border-t border-gray-800/80 pt-4"><span class="font-semibold text-gray-200">Outcome:</span> a more stable, usable website, with ongoing maintenance available under an agreed arrangement.</p>
                     </div>
-                    <div>
-                        <a href="#contact" data-service-select="Salesforce Integration" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors" aria-label="Inquire about Salesforce Integration">
-                            <span>Request Consultation</span>
-                            <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
+                    <a href="#contact" data-service-select="Website Maintenance &amp; Fixes" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                        <span>Discuss This Service<span class="sr-only">: Website Maintenance and Improvements</span></span>
+                        <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </article>
 
             </div>
 
-            <div class="mt-12 text-center">
-                <a href="#contact"
-                    class="inline-flex items-center gap-2 py-3 px-8 rounded-full text-white font-semibold bg-purple-700/80 hover:bg-purple-600 transition-all shadow-md">
-                    <span>Discuss Your Requirements</span>
-                    <i class="fas fa-arrow-right text-sm"></i>
-                </a>
+            <!-- Specialised services -->
+            <div class="mt-14">
+                <h3 class="text-lg font-bold text-white mb-1">Specialised Services</h3>
+                <p class="text-sm text-gray-400 mb-6 max-w-3xl">Available for selected projects. We review each requirement during discovery and will tell you plainly if it is outside what we can deliver well.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <article class="card p-6 rounded-2xl text-left border border-gray-800 bg-gray-900/40 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-mobile-screen-button text-purple-300 text-lg" aria-hidden="true"></i>
+                                <h4 class="text-base font-bold text-white">Mobile App Development</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-4">Cross-platform apps for iOS and Android, such as customer-facing utility apps, business workflow apps, and companion apps for an existing web platform or API.</p>
+                        </div>
+                        <a href="#contact" data-service-select="Mobile App Development" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                            <span>Discuss This Service<span class="sr-only">: Mobile App Development</span></span>
+                            <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    <article class="card p-6 rounded-2xl text-left border border-gray-800 bg-gray-900/40 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-network-wired text-purple-300 text-lg" aria-hidden="true"></i>
+                                <h4 class="text-base font-bold text-white">Salesforce &amp; MuleSoft Integration</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-4">Technical consultation and integration work connecting CRM, databases and business applications through APIs. Scope, approach and delivery are confirmed per project before we accept the work.</p>
+                        </div>
+                        <a href="#contact" data-service-select="Salesforce / MuleSoft Integration" class="service-inquire-btn inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors self-start">
+                            <span>Request a Consultation<span class="sr-only">: Salesforce and MuleSoft Integration</span></span>
+                            <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!-- AGENCY PARTNERSHIP -->
+        <section id="agencies" class="py-20 px-4 max-w-6xl mx-auto">
+            <div class="card rounded-3xl border border-purple-500/20 bg-gradient-to-br from-gray-900/90 via-purple-950/20 to-gray-900/90 p-8 sm:p-12 grid lg:grid-cols-2 gap-10">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">For Agencies</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Your Development Partner Behind the Scenes</h2>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+                        Need additional development capacity for client projects? TATTVO TECH can work with agencies on agreed website development, frontend implementation, and technical improvement tasks.
+                    </p>
+                    <ul class="space-y-2 mb-6 text-sm text-gray-300">
+                        <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Building websites from your approved designs</span></li>
+                        <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Frontend implementation for your design team</span></li>
+                        <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Fixes, updates and improvements on client websites</span></li>
+                        <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Extra capacity for clearly defined tasks when your team is busy</span></li>
+                    </ul>
+                    <div class="p-4 rounded-2xl border border-gray-700/70 bg-gray-950/50 text-sm text-gray-300 leading-relaxed mb-8">
+                        <p class="font-semibold text-white mb-1"><i class="fas fa-user-secret text-purple-400 mr-1.5" aria-hidden="true"></i> White-label collaboration</p>
+                        <p>We can work under your agency's brand, communicate only with your team, and keep your client details confidential. The arrangement, including any NDA, is agreed with you before work begins.</p>
+                    </div>
+                    <a href="#contact" data-service-select="Agency / White-Label Collaboration"
+                        class="service-inquire-btn inline-flex items-center gap-2 py-3 px-7 rounded-full text-white font-semibold bg-purple-700 hover:bg-purple-600 transition-all shadow-md">
+                        <span>Discuss Agency Collaboration</span>
+                        <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-5">How a collaboration works</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm shrink-0">1</span>
+                            <div><p class="font-semibold text-white">Share your project brief</p><p class="text-sm text-gray-400">Designs, requirements, target platform and any deadlines.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm shrink-0">2</span>
+                            <div><p class="font-semibold text-white">Agree on scope, timeline and pricing</p><p class="text-sm text-gray-400">We confirm deliverables, milestones and payment terms in writing.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm shrink-0">3</span>
+                            <div><p class="font-semibold text-white">Develop and review the deliverables</p><p class="text-sm text-gray-400">You review progress at agreed checkpoints and share feedback.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm shrink-0">4</span>
+                            <div><p class="font-semibold text-white">Complete agreed testing and handover</p><p class="text-sm text-gray-400">Code, files and access are handed over as agreed.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm shrink-0">5</span>
+                            <div><p class="font-semibold text-white">Discuss ongoing support where appropriate</p><p class="text-sm text-gray-400">Further work or maintenance is arranged separately if needed.</p></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
 
         <!-- SELECTED PROJECTS / OUR WORK -->
         <section id="work" class="py-20 px-4 max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Portfolio</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Selected Work</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Selected Work</h2>
                 <p class="text-gray-400 text-base sm:text-lg">
-                    Real client solutions delivered by Tattvo Tech across web development, custom UI, and digital platforms.
+                    Live production websites developed by TATTVO TECH. Each summary describes the work we delivered. We don't publish performance figures we can't verify.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Project 1: Square Meter Living Spaces -->
-                <div class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                <!-- Project 1: Square Meter Lifestyle LLP -->
+                <article class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between">
                     <div class="p-7">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">Real Estate</span>
-                            <a href="https://squaremeterls.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Visit live website for Square Meter Living Spaces (opens in new tab)">
-                                <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                            </a>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">Interiors &amp; Real Estate</span>
+                            <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Live site</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Square Meter Living Spaces</h3>
-                        <div class="space-y-3 mb-5 text-xs leading-relaxed">
+                        <h3 class="text-xl font-bold mb-3 text-white">Square Meter Lifestyle LLP</h3>
+                        <dl class="space-y-3 mb-5 text-sm leading-relaxed">
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">The Requirement:</span>
-                                <p class="text-gray-400">Establish an online presence to showcase residential property developments, floor plans, and enable direct buyer inquiries.</p>
+                                <dt class="font-semibold text-gray-200">Requirement</dt>
+                                <dd class="text-gray-400">Present the firm's luxury interior, corporate project and product work, and give prospective clients a clear way to get in touch.</dd>
                             </div>
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">Delivered:</span>
-                                <p class="text-gray-400">Responsive multi-page website, project photo galleries, location maps, and integrated contact/inquiry capture.</p>
+                                <dt class="font-semibold text-gray-200">What we delivered</dt>
+                                <dd class="text-gray-400">A responsive multi-page website covering interiors, corporate projects, products, a leather collection, a gallery and a contact page.</dd>
                             </div>
-                        </div>
-
+                            <div>
+                                <dt class="font-semibold text-gray-200">Highlights</dt>
+                                <dd class="text-gray-400">Filterable project gallery with lightbox viewing; scroll animations; mobile-friendly navigation.</dd>
+                            </div>
+                        </dl>
                         <div class="border-t border-gray-800/80 pt-4">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-2">Technologies Used</span>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 block mb-2">Technologies</span>
                             <div class="flex flex-wrap gap-1.5 text-xs text-gray-300">
                                 <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">HTML5 / CSS3</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Tailwind CSS</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Responsive UI</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">JavaScript</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">AOS animations</span>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 pt-0 border-t border-gray-800/60 mt-2 flex items-center justify-between">
-                        <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Website
-                        </span>
-                        <a href="https://squaremeterls.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1.5" aria-label="Visit squaremeterls.com in a new tab">
-                            <span>squaremeterls.com</span>
-                            <i class="fas fa-external-link-alt text-[10px]" aria-hidden="true"></i>
+                    <div class="px-7 py-5 border-t border-gray-800/60">
+                        <a href="https://squaremeterls.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-purple-300 hover:text-purple-200 inline-flex items-center gap-1.5">
+                            <span>Visit squaremeterls.com</span>
+                            <i class="fas fa-arrow-up-right-from-square text-[11px]" aria-hidden="true"></i><span class="sr-only">(opens in a new tab)</span>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 2: Red Slime Studio -->
-                <div class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                <article class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between">
                     <div class="p-7">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">Gaming Studio</span>
-                            <a href="https://redslimestudio.com/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Visit live website for Red Slime Studio (opens in new tab)">
-                                <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                            </a>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">Mobile Gaming</span>
+                            <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Live site</span>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white">Red Slime Studio</h3>
-                        <div class="space-y-3 mb-5 text-xs leading-relaxed">
+                        <dl class="space-y-3 mb-5 text-sm leading-relaxed">
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">The Requirement:</span>
-                                <p class="text-gray-400">Create an official gaming studio website to showcase mobile titles, verify app developer identity for ad networks, and host support assets.</p>
+                                <dt class="font-semibold text-gray-200">Requirement</dt>
+                                <dd class="text-gray-400">An official studio website to showcase its mobile game, verify the developer for ad networks, and collect game pitches from other developers.</dd>
                             </div>
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">Delivered:</span>
-                                <p class="text-gray-400">Dark-theme studio portal with game media showcases, app-ads.txt validation, community channels, and fast static delivery.</p>
+                                <dt class="font-semibold text-gray-200">What we delivered</dt>
+                                <dd class="text-gray-400">A dark-theme single-page studio site with a game spotlight, Google Play link, community channels and a pitch submission form.</dd>
                             </div>
-                        </div>
-
+                            <div>
+                                <dt class="font-semibold text-gray-200">Highlights</dt>
+                                <dd class="text-gray-400">Hosted app-ads.txt for ad-network verification; form submissions handled through Formspree; lightweight static delivery.</dd>
+                            </div>
+                        </dl>
                         <div class="border-t border-gray-800/80 pt-4">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-2">Technologies Used</span>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 block mb-2">Technologies</span>
                             <div class="flex flex-wrap gap-1.5 text-xs text-gray-300">
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">HTML5 / CSS3</span>
                                 <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">JavaScript</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Static Site Architecture</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Media Optimization</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Formspree</span>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 pt-0 border-t border-gray-800/60 mt-2 flex items-center justify-between">
-                        <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Website
-                        </span>
-                        <a href="https://redslimestudio.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1.5" aria-label="Visit redslimestudio.com in a new tab">
-                            <span>redslimestudio.com</span>
-                            <i class="fas fa-external-link-alt text-[10px]" aria-hidden="true"></i>
+                    <div class="px-7 py-5 border-t border-gray-800/60">
+                        <a href="https://redslimestudio.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-purple-300 hover:text-purple-200 inline-flex items-center gap-1.5">
+                            <span>Visit redslimestudio.com</span>
+                            <i class="fas fa-arrow-up-right-from-square text-[11px]" aria-hidden="true"></i><span class="sr-only">(opens in a new tab)</span>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 3: CHIPAKK -->
-                <div class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                <article class="card rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-gray-900/40 flex flex-col justify-between">
                     <div class="p-7">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">E-Commerce</span>
-                            <a href="https://chipakk.shop/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Visit live website for CHIPAKK (opens in new tab)">
-                                <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                            </a>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">E-Commerce</span>
+                            <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Live site</span>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white">CHIPAKK</h3>
-                        <div class="space-y-3 mb-5 text-xs leading-relaxed">
+                        <dl class="space-y-3 mb-5 text-sm leading-relaxed">
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">The Requirement:</span>
-                                <p class="text-gray-400">Build an engaging e-commerce storefront for an emerging lifestyle and apparel brand with seamless product catalog browsing, mobile responsiveness, and online ordering.</p>
+                                <dt class="font-semibold text-gray-200">Requirement</dt>
+                                <dd class="text-gray-400">An online store for a sticker brand, with an easy-to-browse catalogue that works well on mobile and supports online ordering.</dd>
                             </div>
                             <div>
-                                <span class="font-semibold text-gray-300 block mb-0.5">Delivered:</span>
-                                <p class="text-gray-400">Mobile-first online store with curated product collections, optimized imagery, clean checkout flow, and direct customer engagement channels.</p>
+                                <dt class="font-semibold text-gray-200">What we delivered</dt>
+                                <dd class="text-gray-400">A custom storefront with product categories, cart and checkout, customer sign-in and online payment.</dd>
                             </div>
-                        </div>
-
+                            <div>
+                                <dt class="font-semibold text-gray-200">Highlights</dt>
+                                <dd class="text-gray-400">Customer accounts via Firebase Authentication; Razorpay payment integration; mobile-first layout.</dd>
+                            </div>
+                        </dl>
                         <div class="border-t border-gray-800/80 pt-4">
-                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-2">Technologies Used</span>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 block mb-2">Technologies</span>
                             <div class="flex flex-wrap gap-1.5 text-xs text-gray-300">
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">E-Commerce Architecture</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Responsive UI</span>
-                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Payment Integration</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">JavaScript</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Firebase Auth</span>
+                                <span class="bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">Razorpay</span>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 pt-0 border-t border-gray-800/60 mt-2 flex items-center justify-between">
-                        <span class="text-xs text-emerald-400 inline-flex items-center gap-1.5 font-medium">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Website
-                        </span>
-                        <a href="https://chipakk.shop/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1.5" aria-label="Visit chipakk.shop in a new tab">
-                            <span>chipakk.shop</span>
-                            <i class="fas fa-external-link-alt text-[10px]" aria-hidden="true"></i>
+                    <div class="px-7 py-5 border-t border-gray-800/60">
+                        <a href="https://chipakk.shop/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-purple-300 hover:text-purple-200 inline-flex items-center gap-1.5">
+                            <span>Visit chipakk.shop</span>
+                            <i class="fas fa-arrow-up-right-from-square text-[11px]" aria-hidden="true"></i><span class="sr-only">(opens in a new tab)</span>
                         </a>
                     </div>
-                </div>
+                </article>
 
+            </div>
+
+            <!-- Other live projects -->
+            <div class="mt-16 pt-12 border-t border-gray-800 text-center">
+                <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-300 mb-8">Other Live Websites We Have Built</h3>
+                <div class="flex justify-center gap-8 items-center flex-wrap max-w-4xl mx-auto">
+                    <a href="https://squaremeterls.com/" target="_blank" rel="noopener noreferrer" class="client-logo" title="Square Meter Lifestyle LLP (opens in a new tab)">
+                        <img src="./assets/img/client-squaremeter.webp" alt="Square Meter Lifestyle LLP" width="99" height="40" loading="lazy" class="h-10 w-auto rounded">
+                    </a>
+                    <a href="https://redslimestudio.com/" target="_blank" rel="noopener noreferrer" class="client-logo" title="Red Slime Studio (opens in a new tab)">
+                        <img src="./assets/img/client-redslime.webp" alt="Red Slime Studio" width="190" height="40" loading="lazy" class="h-10 w-auto">
+                    </a>
+                    <a href="https://lushlayerss.com/" target="_blank" rel="noopener noreferrer" class="client-logo" title="Lush Layers (opens in a new tab)">
+                        <img src="./assets/img/client-lushlayers.webp" alt="Lush Layers" width="48" height="40" loading="lazy" class="h-10 w-auto rounded">
+                    </a>
+                    <a href="https://themarshans.shop/" target="_blank" rel="noopener noreferrer" class="client-logo" title="The Marshans (opens in a new tab)">
+                        <img src="./assets/img/client-marshans.webp" alt="The Marshans" width="88" height="40" loading="lazy" class="h-10 w-auto">
+                    </a>
+                    <a href="https://chipakk.shop/" target="_blank" rel="noopener noreferrer" class="client-logo" title="CHIPAKK (opens in a new tab)">
+                        <img src="./assets/img/client-chipakk.webp" alt="CHIPAKK" width="61" height="40" loading="lazy" class="h-10 w-auto">
+                    </a>
+                </div>
+                <p class="mt-6 text-xs text-gray-400">Logos identify projects we developed and link to the live websites. Their display does not imply endorsement of TATTVO TECH.</p>
             </div>
 
             <!-- Portfolio CTA bar -->
             <div class="mt-12 p-6 rounded-2xl border border-gray-800 bg-gray-900/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <div>
-                    <h4 class="text-base font-bold text-white">Have a similar project in mind?</h4>
-                    <p class="text-xs text-gray-400">Tell us what you're building and we'll help scope the technical approach and timeline.</p>
+                    <h3 class="text-base font-bold text-white">Have a similar project in mind?</h3>
+                    <p class="text-sm text-gray-400">Tell us what you're building and we'll help scope the technical approach and timeline.</p>
                 </div>
-                <a href="#contact" data-service-select="Website Development" class="service-inquire-btn inline-flex items-center gap-2 py-2.5 px-6 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 transition-all shrink-0 shadow-md">
+                <a href="#contact" class="inline-flex items-center gap-2 py-2.5 px-6 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 transition-all shrink-0 shadow-md">
                     <span>Discuss Your Project</span>
                     <i class="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
                 </a>
-            </div>
-
-            <!-- Client Logos Strip with Honest Caption -->
-            <div class="mt-16 pt-12 border-t border-gray-800 text-center">
-                <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-8">Organizations & Businesses We Have Worked With</p>
-                <div class="flex justify-center gap-8 items-center flex-wrap max-w-4xl mx-auto">
-                    <a href="https://squaremeterls.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105" title="Square Meter Living Spaces">
-                        <img src="./assets/Square meter.jpeg" alt="Square Meter Living Spaces Logo" class="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all rounded">
-                    </a>
-                    <a href="https://redslimestudio.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105" title="Red Slime Studio">
-                        <img src="./assets/RSS Logo.png" alt="Red Slime Studio Logo" class="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    </a>
-                    <a href="https://lushlayerss.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105" title="Lush Layers">
-                        <img src="./assets/LL.jpeg" alt="Lush Layers Logo" class="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all rounded">
-                    </a>
-                    <a href="https://themarshans.shop/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105" title="The Marshans">
-                        <img src="./assets/Mar Logo.png" alt="The Marshans Logo" class="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    </a>
-                    <a href="https://chipakk.shop/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105" title="CHIPAKK">
-                        <img src="./assets/CK Logo.png" alt="CHIPAKK Logo" class="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    </a>
-                </div>
             </div>
         </section>
 
         <!-- HOW WE WORK SECTION -->
         <section id="process" class="py-20 px-4 max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Our Process</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">How We Work With You</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">How We Work</h2>
                 <p class="text-gray-400 text-base sm:text-lg">
-                    A clear, collaborative process to ensure every project is planned thoughtfully, built carefully, and delivered reliably.
+                    A simple, written process so you always know what is happening, what comes next, and what has been agreed.
                 </p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ol class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">01</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Discovery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We understand the business problem, your requirements and any technical constraints.</p>
+                </li>
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">02</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Proposal</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">You receive a written scope with deliverables, timeline, price and payment milestones.</p>
+                </li>
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">03</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We build the agreed solution and share progress at the checkpoints set out in the proposal.</p>
+                </li>
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">04</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Testing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We check functionality and responsive behaviour across the agreed browsers and devices.</p>
+                </li>
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">05</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Handover</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We deploy the work or transfer code, files and access, as agreed in the proposal.</p>
+                </li>
+                <li class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <span class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-200 font-bold text-sm mb-4">06</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Additional maintenance or improvements can be provided under a separately agreed arrangement.</p>
+                </li>
+            </ol>
+        </section>
 
-                <!-- Step 1 -->
-                <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
-                    <div class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 font-bold text-sm mb-4">
-                        01
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Understand & Scope</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We listen to your business goals, discuss functional requirements, identify technical constraints, and define a practical scope of work.
-                    </p>
+        <!-- PRICING & ENGAGEMENT -->
+        <section id="engagement" class="py-20 px-4 max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Pricing &amp; Engagement</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Clear Pricing, Agreed Up Front</h2>
+                <p class="text-gray-400 text-base sm:text-lg">
+                    Every project is different, so we don't publish one fixed price list. Pricing depends on the project scope, technical requirements and delivery commitments.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="card p-7 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
+                    <h3 class="text-xl font-bold text-white mb-4">Agreed in writing before work begins</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex gap-3"><i class="fas fa-list-check text-purple-400 mt-1" aria-hidden="true"></i><span><span class="font-semibold text-white">Scope and deliverables:</span> what will be built, and what is not included.</span></li>
+                        <li class="flex gap-3"><i class="fas fa-calendar-days text-purple-400 mt-1" aria-hidden="true"></i><span><span class="font-semibold text-white">Timeline and milestones:</span> checkpoints where you review progress.</span></li>
+                        <li class="flex gap-3"><i class="fas fa-file-invoice text-purple-400 mt-1" aria-hidden="true"></i><span><span class="font-semibold text-white">Price and payment terms:</span> project-based pricing with milestone payments.</span></li>
+                        <li class="flex gap-3"><i class="fas fa-box-open text-purple-400 mt-1" aria-hidden="true"></i><span><span class="font-semibold text-white">Testing, handover and support:</span> exactly what is included, and how further work is handled.</span></li>
+                    </ul>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
-                    <div class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 font-bold text-sm mb-4">
-                        02
+                <div class="card p-7 rounded-2xl border border-purple-500/20 bg-gray-900/40 text-left flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Small projects are welcome</h3>
+                        <p class="text-sm text-gray-400 mb-4">A well-defined small task is a good way to start working together. Typical examples:</p>
+                        <ul class="grid sm:grid-cols-2 gap-2 text-sm text-gray-300 mb-6">
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Website fixes</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Landing pages</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Frontend implementation</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Website improvements</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-purple-400 text-xs mt-1.5" aria-hidden="true"></i><span>Custom development tasks</span></li>
+                        </ul>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Estimate & Plan</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        You receive transparent estimates, technical recommendations, milestone schedules, and clear deliverables before work begins.
-                    </p>
+                    <a href="#contact" data-service-select="Small Project or Fix"
+                        class="service-inquire-btn inline-flex items-center gap-2 py-3 px-7 rounded-full text-white font-semibold bg-purple-700 hover:bg-purple-600 transition-all shadow-md self-start">
+                        <span>Request a Small-Project Quote</span>
+                        <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
+                    </a>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
-                    <div class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 font-bold text-sm mb-4">
-                        03
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Build & Test</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We develop solutions with regular milestone updates, responsive design checks, integration validation, and cross-device testing.
-                    </p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40 text-left">
-                    <div class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 font-bold text-sm mb-4">
-                        04
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Launch & Support</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We assist with deployment, domain and hosting configuration, DNS settings, and post-launch maintenance to keep your solution dependable.
-                    </p>
-                </div>
-
             </div>
         </section>
 
         <!-- ABOUT SECTION -->
         <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="grid lg:grid-cols-2 items-start gap-12">
 
-                <!-- LEFT CONTENT -->
-                <div class="lg:w-1/2">
+                <div>
                     <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Company</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">About TATTVO TECH</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">About TATTVO TECH</h2>
 
                     <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                        TATTVO TECH is a technology services venture focused on helping businesses solve practical technology challenges.
+                        TATTVO TECH is an India-based technology services business that helps agencies and businesses get practical web development work done well.
                     </p>
-
                     <p class="text-base text-gray-400 mb-6 leading-relaxed">
-                        Our services include website development, mobile application development, MuleSoft integration, and Salesforce integration. We aim to understand each client's requirements, recommend a suitable approach, and deliver solutions aligned with their business needs.
+                        Our main focus is website development, frontend implementation, custom web applications and ongoing website improvements. We also take on selected mobile app and Salesforce/MuleSoft integration work where it matches our capabilities.
                     </p>
-
-                    <p class="text-base text-gray-400 mb-8 leading-relaxed">
-                        Our focus is on building dependable client relationships through clear communication, responsible delivery, and long-term technical support.
+                    <p class="text-base text-gray-400 leading-relaxed">
+                        We work on a project basis and as a white-label partner for agencies. We try to understand each requirement properly, recommend a sensible approach and agree on the details before starting, so there are no surprises later.
                     </p>
-
-                    <!-- Core Principles -->
-                    <div class="grid grid-cols-2 gap-3 pt-2 border-t border-gray-800">
-                        <div class="flex items-center gap-2 text-xs font-semibold text-gray-300">
-                            <i class="fas fa-check-circle text-purple-400 text-sm"></i>
-                            <span>Engineering Quality</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-xs font-semibold text-gray-300">
-                            <i class="fas fa-check-circle text-purple-400 text-sm"></i>
-                            <span>Practical Scoping</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-xs font-semibold text-gray-300">
-                            <i class="fas fa-check-circle text-purple-400 text-sm"></i>
-                            <span>Transparent Collaboration</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-xs font-semibold text-gray-300">
-                            <i class="fas fa-check-circle text-purple-400 text-sm"></i>
-                            <span>Client Commitment</span>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- RIGHT IMAGE SLIDER -->
-                <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./assets/about1.png" alt="Team working" class="w-full h-auto">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./assets/about2.png" alt="Web development" class="w-full h-auto">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./assets/about4.png" alt="Cloud & Mobile Apps" class="w-full h-auto">
-                            </div>
-                        </div>
-                    </div>
+                <div class="card p-7 rounded-2xl border border-gray-800 bg-gray-900/40">
+                    <h3 class="text-lg font-bold text-white mb-5">At a glance</h3>
+                    <dl class="divide-y divide-gray-800 text-sm">
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Location</dt><dd class="col-span-2 text-gray-200">India</dd></div>
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Time zone</dt><dd class="col-span-2 text-gray-200">IST (UTC+5:30)</dd></div>
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Registration</dt><dd class="col-span-2 text-gray-200">MSME (Udyam) registered business</dd></div>
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Core services</dt><dd class="col-span-2 text-gray-200">Websites, frontend development, custom web applications, maintenance</dd></div>
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Engagements</dt><dd class="col-span-2 text-gray-200">Project-based work, white-label work for agencies, maintenance by agreement</dd></div>
+                        <div class="py-3 grid grid-cols-3 gap-4"><dt class="text-gray-400">Contact</dt><dd class="col-span-2"><a href="mailto:info@tattvotech.com" class="text-purple-300 hover:text-purple-200">info@tattvotech.com</a></dd></div>
+                    </dl>
                 </div>
 
             </div>
-        </section>
 
-        <section id="team" class="py-20 px-4 max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Team &amp; Capabilities</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">How Our Team Delivers</h2>
-                <p class="text-gray-400 text-base sm:text-lg">
-                    A multidisciplinary technical team focused on clean engineering, reliable architecture, and collaborative project execution.
-                </p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
-                <!-- Pillar 1: Web & Frontend Engineering -->
-                <div class="card p-7 rounded-2xl shadow-lg border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all">
-                    <div>
-                        <div class="w-16 h-16 rounded-2xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 mx-auto mb-4 text-2xl shadow-inner">
-                            <i class="fas fa-code" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Full-Stack Web Engineering</h3>
-                        <p class="text-purple-400 text-sm font-medium mb-3">Architecture &amp; Performance</p>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">
-                            Building responsive, accessible web applications with clean component architecture, fast load times, and maintainable codebases.
-                        </p>
+            <!-- Working with us from overseas -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-white mb-2">Working With Us From Another Country</h3>
+                <p class="text-gray-400 mb-8 max-w-3xl">What you can expect when you work with our team remotely.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-comments text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Clear communication</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Day-to-day updates by email or WhatsApp, with calls scheduled at times that suit both time zones.</p>
                     </div>
-                    <div class="border-t border-gray-800/80 pt-3">
-                        <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-1.5">Core Strengths</span>
-                        <div class="flex flex-wrap justify-center gap-1.5 text-[11px] text-gray-300">
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">Modern Web</span>
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">Performance</span>
-                        </div>
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-file-signature text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Scope agreed first</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Work starts only after the scope, timeline, price and payment terms are agreed in writing.</p>
                     </div>
-                </div>
-
-                <!-- Pillar 2: UI/UX & Design Systems -->
-                <div class="card p-7 rounded-2xl shadow-lg border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all">
-                    <div>
-                        <div class="w-16 h-16 rounded-2xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 mx-auto mb-4 text-2xl shadow-inner">
-                            <i class="fas fa-layer-group" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 text-white">UI/UX &amp; Product Design</h3>
-                        <p class="text-purple-400 text-sm font-medium mb-3">User-Centered Experiences</p>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">
-                            Designing intuitive workflows, responsive design systems, and modern digital interfaces that prioritize clarity and user engagement.
-                        </p>
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-lock text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Confidentiality</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Project details and client materials are kept confidential. A non-disclosure agreement can be put in place before you share details.</p>
                     </div>
-                    <div class="border-t border-gray-800/80 pt-3">
-                        <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-1.5">Core Strengths</span>
-                        <div class="flex flex-wrap justify-center gap-1.5 text-[11px] text-gray-300">
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">UI/UX Design</span>
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">Design Systems</span>
-                        </div>
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-key text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Clean handover</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">On completion, source code, project files and access credentials are handed over as set out in the agreement.</p>
                     </div>
-                </div>
-
-                <!-- Pillar 3: Integration & Backend Services -->
-                <div class="card p-7 rounded-2xl shadow-lg border border-gray-800 bg-gray-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all sm:col-span-2 lg:col-span-1">
-                    <div>
-                        <div class="w-16 h-16 rounded-2xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 mx-auto mb-4 text-2xl shadow-inner">
-                            <i class="fas fa-network-wired" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-1 text-white">System &amp; API Integration</h3>
-                        <p class="text-purple-400 text-sm font-medium mb-3">Enterprise Data Connectivity</p>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">
-                            Implementing API-led connectivity, MuleSoft connectors, and secure CRM workflows to ensure seamless communication across enterprise platforms.
-                        </p>
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-scale-balanced text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Honest assessment</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">If a requirement is outside what we can deliver well, we'll tell you so rather than over-promise.</p>
                     </div>
-                    <div class="border-t border-gray-800/80 pt-3">
-                        <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 block mb-1.5">Core Strengths</span>
-                        <div class="flex flex-wrap justify-center gap-1.5 text-[11px] text-gray-300">
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">API Integration</span>
-                            <span class="bg-gray-800/80 px-2 py-0.5 rounded border border-gray-700/50">MuleSoft</span>
-                        </div>
+                    <div class="card p-6 rounded-2xl border border-gray-800 bg-gray-900/40">
+                        <i class="fas fa-earth-asia text-purple-300 text-xl mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white mb-1.5">Based in India</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Our team works in Indian Standard Time (UTC+5:30), and all communication is in English.</p>
                     </div>
                 </div>
             </div>
@@ -736,21 +748,21 @@
         <section id="initiatives" class="py-16 px-4 max-w-5xl mx-auto">
             <div class="card p-8 sm:p-10 rounded-3xl border border-purple-500/20 bg-gradient-to-br from-gray-900/90 via-purple-950/20 to-gray-900/90 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-left">
                 <div class="max-w-2xl">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-purple-300 bg-purple-900/40 border border-purple-500/30 mb-3">
-                        <i class="fas fa-flask text-purple-400"></i> R&amp;D Initiative
-                    </div>
-                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+                    <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-purple-200 bg-purple-900/40 border border-purple-500/30 mb-3">
+                        <i class="fas fa-flask text-purple-400" aria-hidden="true"></i> R&amp;D Initiative
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
                         Future Initiatives: Tattvo Vision
-                    </h3>
+                    </h2>
                     <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
                         Alongside our core services, we are researching an AI financial intelligence platform designed to help Indian businesses and finance professionals understand financial records with audit trails and evidence.
                     </p>
                 </div>
                 <div class="shrink-0 w-full md:w-auto">
                     <a href="tattvo-vision.html"
-                        class="w-full md:w-auto inline-flex items-center justify-center gap-2.5 py-3 px-6 rounded-full text-white text-sm font-semibold bg-purple-700/80 hover:bg-purple-600 border border-purple-500/40 transition-all shadow-md group">
+                        class="w-full md:w-auto inline-flex items-center justify-center gap-2.5 py-3 px-6 rounded-full text-white text-sm font-semibold bg-purple-700 hover:bg-purple-600 border border-purple-500/40 transition-all shadow-md group">
                         <span>Learn About Vision</span>
-                        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -759,118 +771,165 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Start a Conversation</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-3">Let's Discuss Your Project</h2>
+                <span class="text-xs font-semibold uppercase tracking-widest text-purple-400 block mb-2">Start a Project</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-white">Tell Us About Your Project</h2>
                 <p class="text-gray-400 text-base">
-                    Looking for a website, mobile application, or business-system integration? Tell us what you need, and our team will review your requirements.
+                    Share a few details about your requirements. We'll review the information and discuss suitable next steps.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-5 gap-8 items-start">
 
-                <!-- Left: Verified Contact Information -->
+                <!-- Left: Contact Information -->
                 <div class="md:col-span-2 card p-8 rounded-3xl border border-gray-800 bg-gray-900/50 space-y-6">
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">Direct Contact</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
-                            Prefer to reach out directly? We're available by email, phone, or WhatsApp to discuss your project.
+                            Prefer to reach out directly? You can contact us by email, phone or WhatsApp.
                         </p>
                     </div>
 
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0" aria-hidden="true">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <span class="text-xs font-medium uppercase text-gray-500 block">Email Us</span>
-                                <a href="mailto:info@tattvotech.com" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">info@tattvotech.com</a>
+                                <span class="text-xs font-medium uppercase text-gray-400 block">Email</span>
+                                <a href="mailto:info@tattvotech.com" class="text-sm font-semibold text-white hover:text-purple-300 transition-colors">info@tattvotech.com</a>
                             </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0">
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0" aria-hidden="true">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <span class="text-xs font-medium uppercase text-gray-500 block">Call Us</span>
-                                <a href="tel:+918790340337" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">+91 8790340337</a>
+                                <span class="text-xs font-medium uppercase text-gray-400 block">Phone</span>
+                                <a href="tel:+918790340337" class="text-sm font-semibold text-white hover:text-purple-300 transition-colors">+91 8790340337</a>
                             </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0">
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 shrink-0" aria-hidden="true">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>
-                                <span class="text-xs font-medium uppercase text-gray-500 block">WhatsApp</span>
-                                <a href="https://wa.me/918790340337" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-purple-400 transition-colors">Chat on WhatsApp</a>
+                                <span class="text-xs font-medium uppercase text-gray-400 block">WhatsApp</span>
+                                <a href="https://wa.me/918790340337" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-purple-300 transition-colors">Chat on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
-                    <div class="pt-4 border-t border-gray-800 text-xs text-gray-500 leading-relaxed">
-                        We typically respond to project inquiries within 1 business day with initial feedback or a scoping call.
+                    <div class="pt-5 border-t border-gray-800">
+                        <h4 class="text-sm font-bold text-white mb-3">What happens next</h4>
+                        <ol class="space-y-2.5 text-sm text-gray-400">
+                            <li class="flex gap-3"><span class="text-purple-300 font-bold">1.</span><span>We review your details, usually within 1 business day.</span></li>
+                            <li class="flex gap-3"><span class="text-purple-300 font-bold">2.</span><span>We get in touch using your preferred method to clarify requirements.</span></li>
+                            <li class="flex gap-3"><span class="text-purple-300 font-bold">3.</span><span>If the project is a good fit, we send a proposal with scope, timeline and price.</span></li>
+                        </ol>
                     </div>
                 </div>
 
-                <!-- Right: Streamlined Project Inquiry Form -->
-                <div class="md:col-span-3 bg-gray-900/60 p-8 rounded-3xl border border-gray-800 shadow-2xl">
+                <!-- Right: Project Inquiry Form -->
+                <div class="md:col-span-3 bg-gray-900/60 p-6 sm:p-8 rounded-3xl border border-gray-800 shadow-2xl">
                     <!-- Inline Form Feedback Banner -->
-                    <div id="form-status" class="hidden mb-6 rounded-2xl p-4 text-sm font-medium border" role="alert" aria-live="polite"></div>
+                    <div id="form-status" class="hidden mb-6 rounded-2xl p-4 text-sm font-medium border" role="status" aria-live="polite" tabindex="-1"></div>
 
-                    <form id="project-inquiry-form" action="https://formspree.io/f/xyekgdjw" method="POST" class="space-y-5">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="full_name" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Full Name <span class="text-purple-400">*</span></label>
-                                <input id="full_name" name="name" type="text" required autocomplete="name" placeholder="e.g. John Doe"
-                                    class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white placeholder-gray-500 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm">
-                            </div>
-
-                            <div>
-                                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Work Email <span class="text-purple-400">*</span></label>
-                                <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@company.com"
-                                    class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white placeholder-gray-500 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm">
-                            </div>
+                    <form id="project-inquiry-form" action="https://formspree.io/f/xyekgdjw" method="POST" class="space-y-5" novalidate>
+                        <input type="hidden" name="_subject" value="New project inquiry from tattvotech.com">
+                        <!-- Honeypot field for spam bots (Formspree discards submissions where this is filled) -->
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="_gotcha">Leave this field empty</label>
+                            <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
-                                <label for="mobile" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Phone / Mobile</label>
-                                <input id="mobile" name="mobile" type="tel" autocomplete="tel" placeholder="+91 98765 43210"
-                                    class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white placeholder-gray-500 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm">
+                                <label for="full_name" class="form-label">Name <span class="text-purple-300" aria-hidden="true">*</span></label>
+                                <input id="full_name" name="name" type="text" required maxlength="100" autocomplete="name" placeholder="Your name"
+                                    aria-describedby="full_name-error" class="form-input">
+                                <p id="full_name-error" class="form-error hidden"></p>
                             </div>
 
                             <div>
-                                <label for="company" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Company Name <span class="text-gray-500 text-[11px] font-normal">(Optional)</span></label>
-                                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Your business or venture"
-                                    class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white placeholder-gray-500 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm">
+                                <label for="email" class="form-label">Business Email <span class="text-purple-300" aria-hidden="true">*</span></label>
+                                <input id="email" name="email" type="email" required maxlength="150" autocomplete="email" placeholder="name@company.com"
+                                    aria-describedby="email-error" class="form-input">
+                                <p id="email-error" class="form-error hidden"></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="company" class="form-label">Company or Agency <span class="form-optional">(Optional)</span></label>
+                                <input id="company" name="company" type="text" maxlength="150" autocomplete="organization" placeholder="Your business or agency"
+                                    class="form-input">
+                            </div>
+
+                            <div>
+                                <label for="service_required" class="form-label">Project Type <span class="text-purple-300" aria-hidden="true">*</span></label>
+                                <select id="service_required" name="service" required aria-describedby="service_required-error" class="form-input">
+                                    <option value="">Select a project type</option>
+                                    <option value="Website Development">Website Development / Redesign</option>
+                                    <option value="Frontend Development">Frontend Development</option>
+                                    <option value="Custom Web Application">Custom Web Application</option>
+                                    <option value="Website Maintenance &amp; Fixes">Website Maintenance &amp; Fixes</option>
+                                    <option value="Small Project or Fix">Small Project or Fix</option>
+                                    <option value="Agency / White-Label Collaboration">Agency / White-Label Collaboration</option>
+                                    <option value="Mobile App Development">Mobile App Development</option>
+                                    <option value="Salesforce / MuleSoft Integration">Salesforce / MuleSoft Integration</option>
+                                    <option value="Other / Not Sure">Other / Not Sure</option>
+                                </select>
+                                <p id="service_required-error" class="form-error hidden"></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="budget" class="form-label">Approximate Budget <span class="form-optional">(Optional)</span></label>
+                                <select id="budget" name="budget" class="form-input">
+                                    <option value="">Prefer to discuss</option>
+                                    <option value="Under USD 1,000">Under USD 1,000</option>
+                                    <option value="USD 1,000 - 3,000">USD 1,000 – 3,000</option>
+                                    <option value="USD 3,000 - 7,500">USD 3,000 – 7,500</option>
+                                    <option value="USD 7,500+">USD 7,500+</option>
+                                    <option value="Not sure yet">Not sure yet</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="contact_method" class="form-label">Contact Preference <span class="form-optional">(Optional)</span></label>
+                                <select id="contact_method" name="contact_method" class="form-input">
+                                    <option value="Email">Email</option>
+                                    <option value="Video call">Video call</option>
+                                    <option value="Phone">Phone</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                </select>
                             </div>
                         </div>
 
                         <div>
-                            <label for="service_required" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Service Required</label>
-                            <select id="service_required" name="service"
-                                class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm">
-                                <option value="Website Development">Website Development</option>
-                                <option value="Mobile App Development">Mobile App Development</option>
-                                <option value="MuleSoft Integration">MuleSoft Integration</option>
-                                <option value="Salesforce Integration">Salesforce Integration</option>
-                                <option value="Multiple / Other Services">Multiple / Other Services</option>
-                            </select>
+                            <label for="mobile" class="form-label">Phone / WhatsApp <span class="form-optional">(Optional, include country code)</span></label>
+                            <input id="mobile" name="mobile" type="tel" maxlength="30" autocomplete="tel" placeholder="+1 555 123 4567"
+                                aria-describedby="mobile-error" class="form-input">
+                            <p id="mobile-error" class="form-error hidden"></p>
                         </div>
 
                         <div>
-                            <label for="description" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1.5">Project Details <span class="text-purple-400">*</span></label>
-                            <textarea id="description" name="description" rows="4" required placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
-                                class="w-full p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-white placeholder-gray-500 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-sm"></textarea>
+                            <label for="description" class="form-label">Project Requirements <span class="text-purple-300" aria-hidden="true">*</span></label>
+                            <textarea id="description" name="description" rows="5" required minlength="20" maxlength="5000" placeholder="What do you need built or fixed? Include any links, deadlines or existing designs."
+                                aria-describedby="description-error" class="form-input"></textarea>
+                            <p id="description-error" class="form-error hidden"></p>
                         </div>
 
-                        <div class="pt-2">
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            We use these details only to respond to your inquiry and discuss your project. See our <a href="privacy.html" class="underline text-gray-300 hover:text-white">Privacy Policy</a> for how submissions are handled. Fields marked <span class="text-purple-300">*</span> are required.
+                        </p>
+
+                        <div>
                             <button type="submit" id="form-submit-btn"
-                                class="w-full py-3.5 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-purple-500/25 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                                class="w-full py-3.5 px-8 rounded-full text-white font-bold bg-purple-700 hover:bg-purple-600 disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-purple-500/25 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
                                 <span id="submit-btn-text">Send Project Inquiry</span>
-                                <i id="submit-btn-spinner" class="fas fa-spinner fa-spin hidden"></i>
+                                <i id="submit-btn-spinner" class="fas fa-spinner fa-spin hidden" aria-hidden="true"></i>
                             </button>
                         </div>
                     </form>
@@ -881,73 +940,71 @@
 
     </main>
 
-    <footer class="py-12 px-4 text-center text-gray-500 border-t border-gray-800 mt-12">
-        <div
-            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-x-8 md:space-y-0 text-white">
-            <div class="flex-1 text-left">
-                <div class="flex items-center space-x-2 mb-2">
-                    <img src="./assets/logo.png" alt="TATTVO TECH Logo" class="h-7">
+    <footer class="py-12 px-4 text-gray-400 border-t border-gray-800 mt-12">
+        <div class="max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-4 text-left">
+            <div>
+                <div class="flex items-center space-x-2 mb-3">
+                    <img src="./assets/img/logo.webp" alt="" width="162" height="28" loading="lazy" class="h-7 w-auto">
                     <span class="font-bold text-white tracking-wider">TATTVO TECH</span>
                 </div>
-                <p class="text-sm leading-relaxed text-gray-400 max-w-sm">
-                    Technology solutions built around your business. We build websites, mobile applications, and provide MuleSoft and Salesforce integration services.
+                <p class="text-sm leading-relaxed max-w-sm">
+                    Website development, frontend engineering and custom web solutions for agencies and growing businesses.
                 </p>
-                <p class="text-xs text-gray-500 mt-4">
-                    Our Vision: To become a trusted technology company known for delivering reliable solutions, meaningful innovation, and lasting value for businesses.
-                </p>
+                <p class="text-xs mt-4 leading-relaxed">MSME (Udyam) registered business<br>India · IST (UTC+5:30)</p>
             </div>
 
-            <div class="flex-1 text-left">
-                <h3 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-400">Services</h3>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Website Development</a></li>
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Mobile App Development</a></li>
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">MuleSoft Integration</a></li>
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Salesforce Integration</a></li>
+            <div>
+                <h2 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-300">Services</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="hover:text-white transition-colors">Website Development</a></li>
+                    <li><a href="#services" class="hover:text-white transition-colors">Frontend Development</a></li>
+                    <li><a href="#services" class="hover:text-white transition-colors">Custom Web Applications</a></li>
+                    <li><a href="#services" class="hover:text-white transition-colors">Website Maintenance</a></li>
+                    <li><a href="#agencies" class="hover:text-white transition-colors">White-Label for Agencies</a></li>
                 </ul>
             </div>
 
-            <div class="flex-1 text-left">
-                <h3 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-400">Navigation</h3>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#hero" class="hover:text-purple-400 transition-colors">Home</a></li>
-                    <li><a href="#services" class="hover:text-purple-400 transition-colors">Services</a></li>
-                    <li><a href="#work" class="hover:text-purple-400 transition-colors">Our Work</a></li>
-                    <li><a href="#process" class="hover:text-purple-400 transition-colors">How We Work</a></li>
-                    <li><a href="#about" class="hover:text-purple-400 transition-colors">About Us</a></li>
-                    <li><a href="#team" class="hover:text-purple-400 transition-colors">Our Team</a></li>
-                    <li><a href="tattvo-vision.html" class="hover:text-purple-400 transition-colors">Tattvo Vision <span class="text-[10px] text-purple-400 border border-purple-500/40 rounded px-1.5 py-0.5 ml-1">R&amp;D</span></a></li>
-                    <li><a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a></li>
+            <div>
+                <h2 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-300">Company</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#work" class="hover:text-white transition-colors">Our Work</a></li>
+                    <li><a href="#process" class="hover:text-white transition-colors">How We Work</a></li>
+                    <li><a href="#engagement" class="hover:text-white transition-colors">Pricing &amp; Engagement</a></li>
+                    <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="tattvo-vision.html" class="hover:text-white transition-colors">Tattvo Vision <span class="text-[10px] text-purple-300 border border-purple-500/40 rounded px-1.5 py-0.5 ml-1">R&amp;D</span></a></li>
+                    <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a></li>
+                    <li><button type="button" data-consent-open class="hover:text-white transition-colors">Cookie Settings</button></li>
                 </ul>
             </div>
 
-            <div class="flex-1 text-left md:text-right">
-                <h3 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-400">Follow Us</h3>
-                <div class="flex space-x-4 mb-4 justify-start md:justify-end">
-                    <a href="https://x.com/TattvoTech?t=g-LQDmT6fKnVeJkjeaHB5A&s=08"
-                        class="text-xl hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on X">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline">
+            <div>
+                <h2 class="font-bold mb-4 text-sm uppercase tracking-wider text-purple-300">Contact</h2>
+                <div class="text-sm space-y-1.5 mb-5">
+                    <p><a href="mailto:info@tattvotech.com" class="hover:text-white transition-colors">info@tattvotech.com</a></p>
+                    <p><a href="tel:+918790340337" class="hover:text-white transition-colors">+91 8790340337</a></p>
+                    <p><a href="#contact" class="text-purple-300 hover:text-purple-200 font-semibold">Discuss your project →</a></p>
+                </div>
+                <div class="flex space-x-4 text-white">
+                    <a href="https://www.linkedin.com/company/tattvo-tech/"
+                        class="text-xl hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="https://x.com/TattvoTech"
+                        class="text-xl hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on X">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline" aria-hidden="true">
                             <path
                                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.973 6.817H1.674l7.73-8.823L1.254 2.25h7.08l4.713 6.231 5.197-6.231z" />
                         </svg>
                     </a>
                     <a href="https://wa.me/918790340337"
-                        class="text-xl hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Contact TATTVO TECH on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/company/tattvo-tech/"
-                        class="text-xl hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/tattvotech?igsh=emszMWo0YXhkd281"
-                        class="text-xl hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@tattvotech?si=QdRjD6iqTS71AOgL"
-                        class="text-xl hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                <h3 class="font-bold mb-2 text-sm uppercase tracking-wider text-purple-400">Direct Contact</h3>
-                <div class="text-sm space-y-1 text-gray-400">
-                    <p><a href="tel:+918790340337" class="hover:text-white transition-colors">+91 8790340337</a></p>
-                    <p><a href="mailto:info@tattvotech.com" class="hover:text-white transition-colors">info@tattvotech.com</a></p>
+                        class="text-xl hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Contact TATTVO TECH on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/tattvotech"
+                        class="text-xl hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://youtube.com/@tattvotech"
+                        class="text-xl hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="TATTVO TECH on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
-        <p class="mt-8 text-sm text-gray-500">&copy; 2026 TATTVO TECH. All rights reserved.</p>
+        <p class="mt-10 text-sm text-center">&copy; 2026 TATTVO TECH. All rights reserved.</p>
     </footer>
 
 </body>

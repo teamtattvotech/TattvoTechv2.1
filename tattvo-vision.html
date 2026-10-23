@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4D9GLDBT1"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) with Consent Mode: analytics storage is denied by default for EEA/UK/CH visitors until they accept -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+      gtag('consent', 'default', { analytics_storage: 'denied', region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'] });
+      try { var c = localStorage.getItem('tt_analytics_consent'); if (c) gtag('consent', 'update', { analytics_storage: c }); } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-H4D9GLDBT1');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4D9GLDBT1"></script>
+    <script defer src="consent.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tattvo Vision | AI Financial Intelligence for India</title>
     <link rel="canonical" href="https://tattvotech.com/tattvo-vision.html">
     <meta name="description" content="Explore Tattvo Vision, Tattvo Tech's product initiative for AI-powered accounting, financial document intelligence, GST, tax research and financial analysis.">
@@ -2272,6 +2276,9 @@
                 <a href="index.html" class="hover:text-white transition-colors">TATTVO TECH Homepage</a>
                 <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
                 <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <button type="button" data-consent-open class="hover:text-white transition-colors">Cookie Settings</button>
             </div>
         </div>
     </footer>

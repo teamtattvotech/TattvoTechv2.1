@@ -1,41 +1,33 @@
 TATTVO TECH Website
-This is the front-end code for the TATTVO TECH company website, designed to be modern, responsive, and easy to maintain.
+Static marketing website for TATTVO TECH, hosted on GitHub Pages at https://tattvotech.com (see CNAME). There is no build step: edit the files and push.
 
 Project Structure
-This project follows a standard file structure to separate concerns and improve readability.
+index.html: Homepage (hero, services, agency partnership, portfolio, process, pricing & engagement, about, contact form).
 
-index.html: The main HTML file that provides the structure of the website.
+privacy.html / terms.html: Privacy Policy and Terms of Use.
 
-style.css: Contains all the custom CSS rules for styling the components.
+404.html: Custom "page not found" page served by GitHub Pages.
 
-script.js: Contains all the JavaScript logic for animations and interactivity.
+tattvo-vision.html: Tattvo Vision R&D initiative page.
 
-assets/: A folder to store all static assets like images and logos.
+style.css: Custom CSS on top of Tailwind (cards, form fields, focus styles, legal page typography).
 
-package.json: A standard project file for managing dependencies and scripts.
+script.js: Hero 3D animation, navigation, contact form validation/submission and GA4 event tracking.
 
-Getting Started
-Clone or Download: Get the project files.
+consent.js: Analytics cookie banner. Works with the Google Consent Mode defaults set inline in each page's <head>.
 
-Organize Files: Place the files in the structure described in project_structure.md.
+assets/img/: Optimised WebP images used by the site. Original source images are kept in assets/.
 
-Add Your Assets:
+sitemap.xml / robots.txt: Search engine files. Add new public pages to sitemap.xml.
 
-Replace the placeholder logo in assets/logo.jpeg with your actual logo.
+Contact Form
+The inquiry form posts to Formspree (https://formspree.io/f/xyekgdjw). Submissions are forwarded to the inbox configured in the Formspree dashboard. Spam protection uses Formspree's _gotcha honeypot field. Field names (name, email, company, service, budget, contact_method, mobile, description) appear in the emails, so keep them stable.
 
-Add your team member photos to the assets/team/ folder.
+Analytics
+Google Analytics 4 (G-H4D9GLDBT1) with Consent Mode. Analytics storage is denied by default for EEA/UK/CH visitors until they accept. Other visitors can decline through the banner or "Cookie Settings" in the footer.
 
-Update the src attributes for the team member images in index.html to link to your new files (e.g., <img src="./assets/team/your-name.jpeg">).
-
-Run Locally: You can open index.html directly in your browser or use a live server to test the code.
+Run Locally
+npm start (or any static server, e.g. python3 -m http.server) and open http://localhost:8080.
 
 Technologies Used
-HTML5: For the page structure.
-
-Tailwind CSS: For fast and responsive styling.
-
-JavaScript: For interactivity and animations.
-
-Three.js: A JavaScript library for the 3D background animation.
-
-Font Awesome: For professional icons.
+HTML5, Tailwind CSS (CDN), vanilla JavaScript, Three.js (hero animation), Font Awesome (icons), Formspree (form handling).
